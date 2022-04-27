@@ -1,76 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>めざせポケモンマスター！</title>
-    <url>/2022/04/17/%E3%82%81%E3%81%96%E3%81%9B%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%BC/</url>
-    <content><![CDATA[<h1 id="留档一些对局"><a href="#留档一些对局" class="headerlink" title="留档一些对局"></a>留档一些对局</h1><ul>
-<li><p><em><strong>被自己帅哭！！</strong></em></p>
-<p><a href="https://replay.pokemonshowdown.com/gen7ou-1183919194">https://replay.pokemonshowdown.com/gen7ou-1183919194</a></p>
-</li>
-<li><p><strong>钱神杯</strong>小组赛第一把,  vs F-岩之柱，败北！苦呀西(´;︵;&#96;)</p>
-</li>
-</ul>
-<p>​		<a href="https://replay.pokemonshowdown.com/gen8bdspubers-1481290075-2xj6qv37bbd1s0gjg8vnrdsgiy4obuipw">https://replay.pokemonshowdown.com/gen8bdspubers-1481290075-2xj6qv37bbd1s0gjg8vnrdsgiy4obuipw</a></p>
-<ul>
-<li><p>其他四把f组小组赛 <span id="more"></span></p>
-<table>
-<thead>
-<tr>
-<th align="center">vs</th>
-<th align="center">Replay</th>
-<th></th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">安龙</td>
-<td align="center"><a href="https://replay.pokemonshowdown.com/gen8bdspubers-1488063228-onqmvjgs1uqeva4su0v51ug54rkppllpw">https://replay.pokemonshowdown.com/gen8bdspubers-1488063228-onqmvjgs1uqeva4su0v51ug54rkppllpw</a></td>
-<td>负</td>
-</tr>
-<tr>
-<td align="center">大同</td>
-<td align="center"><a href="https://replay.pokemonshowdown.com/china-gen8bdspubers-4185078">https://replay.pokemonshowdown.com/china-gen8bdspubers-4185078</a></td>
-<td>胜</td>
-</tr>
-<tr>
-<td align="center">羽</td>
-<td align="center"><a href="https://replay.pokemonshowdown.com/china-gen8bdspubers-4156417">https://replay.pokemonshowdown.com/china-gen8bdspubers-4156417</a></td>
-<td>胜</td>
-</tr>
-<tr>
-<td align="center">洗衣姬</td>
-<td align="center"><a href="https://replay.pokemonshowdown.com/gen8bdspubers-1496342554">https://replay.pokemonshowdown.com/gen8bdspubers-1496342554</a></td>
-<td>胜</td>
-</tr>
-</tbody></table>
-<p><strong>总结</strong> :</p>
-<p>一轮游！小组赛都没出，寄！有点爽的地方是最后当了把水鬼赢了洗衣姬，嘻嘻</p>
-</li>
-</ul>
-<ul>
-<li>双换一穿四</li>
-</ul>
-<p>​		<a href="https://replay.pokemonshowdown.com/gen8ou-1413295304">https://replay.pokemonshowdown.com/gen8ou-1413295304</a></p>
-<ul>
-<li><p>直钩钓鱼</p>
-<p><a href="https://replay.pokemonshowdown.com/gen8ou-1388141736-ih355g49kx70pfmkd99pf40p59g5fagpw">https://replay.pokemonshowdown.com/gen8ou-1388141736-ih355g49kx70pfmkd99pf40p59g5fagpw</a></p>
-</li>
-<li><p>钓鱼,乐</p>
-<p><strong>☆Mindphuck2:</strong> <em>Hi just a friendly warnint</em></p>
-<p>FFFFives进入了房间</p>
-<p><strong>☆Mindphuck2:</strong> <em>i think my team is invincible</em></p>
-<p>lebanesestinker进入了房间</p>
-<p>i am missing还剩120秒。</p>
-<p><strong>☆i am missing:</strong> <em>ok</em></p>
-</li>
-</ul>
-<p>​		<a href="https://replay.pokemonshowdown.com/gen8ou-1388580581">https://replay.pokemonshowdown.com/gen8ou-1388580581</a></p>
-<p><img src="/2022/04/17/%E3%82%81%E3%81%96%E3%81%9B%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%BC/amamiya.png"></p>
-]]></content>
-      <tags>
-        <tag>pokemon</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Mybatis_learn</title>
     <url>/2022/04/27/Mybatis-learn/</url>
     <content><![CDATA[<h1 id="1-step"><a href="#1-step" class="headerlink" title="1.step"></a>1.step</h1><ol>
@@ -129,7 +59,7 @@
 <figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">driver</span>=<span class="string">com.mysql.cj.jdbc.Driver</span></span><br><span class="line"><span class="attr">url</span>=<span class="string">jdbc:mysql://localhost:3306/mybatis?</span></span><br><span class="line"><span class="attr">useSSL</span>=<span class="string">true&amp;amp;useUnicode=true;characterEncoding=UTF-8</span></span><br><span class="line"><span class="attr">username</span>=<span class="string">root</span></span><br><span class="line"><span class="attr">password</span>=<span class="string">gura21</span></span><br></pre></td></tr></table></figure>
 
 <p>上面注意useSSL的位置</p>
-<p><img src="/Mybatis.assets/image-20220420201135054.png" alt="image-20220420201135054"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/avaritiachaos/shark-img/image-20220420201135054.png"></p>
 <p><strong>在xml中，所有的标签都可以规定其顺序，properties得写在上面（具体顺序可以在configuration标签上查看）</strong></p>
 <h2 id="设置别名"><a href="#设置别名" class="headerlink" title="设置别名"></a>设置别名</h2><p>为java类型设置一个较简单的名字</p>
 <h4 id="方式1（可diy）"><a href="#方式1（可diy）" class="headerlink" title="方式1（可diy）"></a>方式1（可diy）</h4><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">typeAliases</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">typeAlias</span> <span class="attr">type</span>=<span class="string">&quot;com.pojo.User&quot;</span> <span class="attr">alias</span>=<span class="string">&quot;User&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">typeAlias</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">typeAliases</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -253,6 +183,76 @@
 ]]></content>
       <tags>
         <tag>galgame</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>めざせポケモンマスター！</title>
+    <url>/2022/04/17/%E3%82%81%E3%81%96%E3%81%9B%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%BC/</url>
+    <content><![CDATA[<h1 id="留档一些对局"><a href="#留档一些对局" class="headerlink" title="留档一些对局"></a>留档一些对局</h1><ul>
+<li><p><em><strong>被自己帅哭！！</strong></em></p>
+<p><a href="https://replay.pokemonshowdown.com/gen7ou-1183919194">https://replay.pokemonshowdown.com/gen7ou-1183919194</a></p>
+</li>
+<li><p><strong>钱神杯</strong>小组赛第一把,  vs F-岩之柱，败北！苦呀西(´;︵;&#96;)</p>
+</li>
+</ul>
+<p>​		<a href="https://replay.pokemonshowdown.com/gen8bdspubers-1481290075-2xj6qv37bbd1s0gjg8vnrdsgiy4obuipw">https://replay.pokemonshowdown.com/gen8bdspubers-1481290075-2xj6qv37bbd1s0gjg8vnrdsgiy4obuipw</a></p>
+<ul>
+<li><p>其他四把f组小组赛 <span id="more"></span></p>
+<table>
+<thead>
+<tr>
+<th align="center">vs</th>
+<th align="center">Replay</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">安龙</td>
+<td align="center"><a href="https://replay.pokemonshowdown.com/gen8bdspubers-1488063228-onqmvjgs1uqeva4su0v51ug54rkppllpw">https://replay.pokemonshowdown.com/gen8bdspubers-1488063228-onqmvjgs1uqeva4su0v51ug54rkppllpw</a></td>
+<td>负</td>
+</tr>
+<tr>
+<td align="center">大同</td>
+<td align="center"><a href="https://replay.pokemonshowdown.com/china-gen8bdspubers-4185078">https://replay.pokemonshowdown.com/china-gen8bdspubers-4185078</a></td>
+<td>胜</td>
+</tr>
+<tr>
+<td align="center">羽</td>
+<td align="center"><a href="https://replay.pokemonshowdown.com/china-gen8bdspubers-4156417">https://replay.pokemonshowdown.com/china-gen8bdspubers-4156417</a></td>
+<td>胜</td>
+</tr>
+<tr>
+<td align="center">洗衣姬</td>
+<td align="center"><a href="https://replay.pokemonshowdown.com/gen8bdspubers-1496342554">https://replay.pokemonshowdown.com/gen8bdspubers-1496342554</a></td>
+<td>胜</td>
+</tr>
+</tbody></table>
+<p><strong>总结</strong> :</p>
+<p>一轮游！小组赛都没出，寄！有点爽的地方是最后当了把水鬼赢了洗衣姬，嘻嘻</p>
+</li>
+</ul>
+<ul>
+<li>双换一穿四</li>
+</ul>
+<p>​		<a href="https://replay.pokemonshowdown.com/gen8ou-1413295304">https://replay.pokemonshowdown.com/gen8ou-1413295304</a></p>
+<ul>
+<li><p>直钩钓鱼</p>
+<p><a href="https://replay.pokemonshowdown.com/gen8ou-1388141736-ih355g49kx70pfmkd99pf40p59g5fagpw">https://replay.pokemonshowdown.com/gen8ou-1388141736-ih355g49kx70pfmkd99pf40p59g5fagpw</a></p>
+</li>
+<li><p>钓鱼,乐</p>
+<p><strong>☆Mindphuck2:</strong> <em>Hi just a friendly warnint</em></p>
+<p>FFFFives进入了房间</p>
+<p><strong>☆Mindphuck2:</strong> <em>i think my team is invincible</em></p>
+<p>lebanesestinker进入了房间</p>
+<p>i am missing还剩120秒。</p>
+<p><strong>☆i am missing:</strong> <em>ok</em></p>
+</li>
+</ul>
+<p>​		<a href="https://replay.pokemonshowdown.com/gen8ou-1388580581">https://replay.pokemonshowdown.com/gen8ou-1388580581</a></p>
+<p><img src="/2022/04/17/%E3%82%81%E3%81%96%E3%81%9B%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%BC/amamiya.png"></p>
+]]></content>
+      <tags>
+        <tag>pokemon</tag>
       </tags>
   </entry>
 </search>
