@@ -1,6 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Redis</title>
+    <url>/2022/05/09/Redis/</url>
+    <content><![CDATA[<h1 id="Redis通用命令"><a href="#Redis通用命令" class="headerlink" title="Redis通用命令"></a>Redis通用命令</h1><span id="more"></span>
+<h2 id="Redis命令行客户端"><a href="#Redis命令行客户端" class="headerlink" title="Redis命令行客户端"></a>Redis命令行客户端</h2><p>Redis安装完成后就自带了命令行客户端：redis-cli，使用方式如下：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">redis-cli [options] [commonds]</span><br></pre></td></tr></table></figure>
+
+<p>其中常见的options有：</p>
+<ul>
+<li><code>-h 127.0.0.1</code>：指定要连接的redis节点的IP地址，默认是127.0.0.1</li>
+<li><code>-p 6379</code>：指定要连接的redis节点的端口，默认是6379</li>
+<li><code>-a 123321</code>：指定redis的访问密码</li>
+</ul>
+<p>其中的commonds就是Redis的操作命令，例如：</p>
+<ul>
+<li><code>ping</code>：与redis服务端做心跳测试，服务端正常会返回<code>pong</code></li>
+</ul>
+<p>不指定commond时，会进入<code>redis-cli</code>的交互控制台</p>
+<p>Redis默认有16个仓库，编号从0至15.  通过配置文件可以设置仓库数量，但是不超过16，并且不能自定义仓库名称。</p>
+<p>如果是基于redis-cli连接Redis服务，可以通过select命令来选择数据库：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 选择 0号库</span></span><br><span class="line">select 0</span><br></pre></td></tr></table></figure>
+
+
+
+<p>KEYS:查看符合模板的所有key，不建议在生产环境设备上使用</p>
+<p>DEL:删除一个key</p>
+<p>EXISTS：判断key是否存在</p>
+<p>EXPIRE：给一个key设置有效期，有效期到期时该key会被自动删除</p>
+<p>TTL：查看一个KEY的剩余有效期</p>
+<h2 id="String的常见命令"><a href="#String的常见命令" class="headerlink" title="String的常见命令"></a>String的常见命令</h2><ul>
+<li>SET:添加或者修改一个已经存在的一个String类型的键值对</li>
+<li>GET:根据key获取String类型的value</li>
+<li>MSET：批量添加多个String类型的value</li>
+<li>MGET：根据多个key获取多个String类型的value</li>
+<li>INCR：让一个整形的key自增1</li>
+<li>INCRBY:让一个整形的key自增并指定步长，例如：incrby num 2 让num值自增2</li>
+<li>INCRBYFLOAT:让一个浮点类型的数字自增并指定步长</li>
+<li>SETNX:添加一个String类型的键值对，前提是这个key不存在，否则不执行</li>
+<li>SETEX:添加一个String类型的键值对，并且指定有效期</li>
+</ul>
+<h1 id="Jedis使用的基本步骤"><a href="#Jedis使用的基本步骤" class="headerlink" title="Jedis使用的基本步骤"></a>Jedis使用的基本步骤</h1><ol>
+<li><p>引入依赖</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>redis.clients<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>jedis<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>4.2.0<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>创建Jedis对象，建立连接</p>
+</li>
+<li><p>使用Jedis，方法名与Redis命令一致</p>
+</li>
+<li><p>释放资源</p>
+</li>
+</ol>
+<p>例：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.fish.test;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.junit.jupiter.api.AfterEach;</span><br><span class="line"><span class="keyword">import</span> org.junit.jupiter.api.BeforeEach;</span><br><span class="line"><span class="keyword">import</span> org.junit.jupiter.api.Test;</span><br><span class="line"><span class="keyword">import</span> redis.clients.jedis.Jedis;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Map;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">JedisTest</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> Jedis jedis;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@BeforeEach</span></span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">setUp</span><span class="params">()</span>&#123;</span><br><span class="line"><span class="comment">//        1.建立连接</span></span><br><span class="line">        jedis=<span class="keyword">new</span> <span class="title class_">Jedis</span>(<span class="string">&quot;192.168.230.130&quot;</span>,<span class="number">6379</span>);</span><br><span class="line"><span class="comment">//        2. 设置密码</span></span><br><span class="line">        jedis.auth(<span class="string">&quot;1121&quot;</span>);</span><br><span class="line"><span class="comment">//        3.选择库</span></span><br><span class="line">        jedis.select(<span class="number">0</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">testString</span><span class="params">()</span>&#123;</span><br><span class="line"><span class="comment">//        存入数据</span></span><br><span class="line">        <span class="type">String</span> <span class="variable">result</span> <span class="operator">=</span> jedis.set(<span class="string">&quot;name&quot;</span>, <span class="string">&quot;ayame&quot;</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;result =&quot;</span> + result);</span><br><span class="line">        String name=jedis.get(<span class="string">&quot;name&quot;</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;name = &quot;</span>+name);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">testHash</span><span class="params">()</span>&#123;</span><br><span class="line">        jedis.hset(<span class="string">&quot;user:1&quot;</span>,<span class="string">&quot;name&quot;</span>,<span class="string">&quot;ayame&quot;</span>);</span><br><span class="line">        jedis.hset(<span class="string">&quot;user:1&quot;</span>,<span class="string">&quot;age&quot;</span>,<span class="string">&quot;23&quot;</span>);</span><br><span class="line">        Map&lt;String, String&gt; map = jedis.hgetAll(<span class="string">&quot;user:1&quot;</span>);</span><br><span class="line">        System.out.println(map);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@AfterEach</span></span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">tearDown</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(jedis != <span class="literal">null</span>)&#123;</span><br><span class="line">            jedis.close();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>改用连接池</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.fish.jedis.util;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> redis.clients.jedis.Jedis;</span><br><span class="line"><span class="keyword">import</span> redis.clients.jedis.JedisPool;</span><br><span class="line"><span class="keyword">import</span> redis.clients.jedis.JedisPoolConfig;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">JedisConnectionFactory</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> JedisPool jedisPool;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">static</span> &#123;</span><br><span class="line"><span class="comment">//        配置连接池</span></span><br><span class="line">        <span class="type">JedisPoolConfig</span> <span class="variable">poolConfig</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">JedisPoolConfig</span>();</span><br><span class="line"><span class="comment">//        最大连接数</span></span><br><span class="line">        poolConfig.setMaxTotal(<span class="number">8</span>);</span><br><span class="line"><span class="comment">//        最大空闲连接</span></span><br><span class="line">        poolConfig.setMaxIdle(<span class="number">8</span>);</span><br><span class="line"><span class="comment">//        最小空闲连接</span></span><br><span class="line">        poolConfig.setMinIdle(<span class="number">0</span>);</span><br><span class="line"><span class="comment">//        设置等待时间</span></span><br><span class="line">        poolConfig.setMaxWaitMillis(<span class="number">1000</span>);</span><br><span class="line"><span class="comment">//        创建连接池对象</span></span><br><span class="line">        jedisPool = <span class="keyword">new</span> <span class="title class_">JedisPool</span>(poolConfig,</span><br><span class="line">                <span class="string">&quot;192.168.230.130&quot;</span>, <span class="number">6379</span>, <span class="number">1000</span>, <span class="string">&quot;1121&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> Jedis <span class="title function_">getJedis</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> jedisPool.getResource();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>则建立连接改为：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">  <span class="meta">@BeforeEach</span></span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">setUp</span><span class="params">()</span>&#123;</span><br><span class="line"><span class="comment">//        1.建立连接</span></span><br><span class="line"><span class="comment">//        jedis=new Jedis(&quot;192.168.230.130&quot;,6379);</span></span><br><span class="line">       jedis=JedisConnectionFactory.getJedis();</span><br><span class="line"><span class="comment">//        2. 设置密码</span></span><br><span class="line">        jedis.auth(<span class="string">&quot;1121&quot;</span>);</span><br><span class="line"><span class="comment">//        3.选择库</span></span><br><span class="line">        jedis.select(<span class="number">0</span>);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="SpringDataRadis"><a href="#SpringDataRadis" class="headerlink" title="SpringDataRadis"></a>SpringDataRadis</h1><ol>
+<li><p>引入依赖</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--        redis依赖--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-data-redis<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--common-pool--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.commons<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>commons-pool2<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>配置redis</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">redis:</span></span><br><span class="line">    <span class="attr">host:</span> <span class="number">192.168</span><span class="number">.230</span><span class="number">.130</span></span><br><span class="line">    <span class="attr">port:</span> <span class="number">6379</span></span><br><span class="line">    <span class="attr">password:</span> <span class="number">1121</span></span><br><span class="line">    <span class="attr">lettuce:</span></span><br><span class="line">      <span class="attr">pool:</span></span><br><span class="line">        <span class="attr">max-active:</span> <span class="number">8</span></span><br><span class="line">        <span class="attr">min-idle:</span> <span class="number">0</span></span><br><span class="line">        <span class="attr">max-idle:</span> <span class="number">8</span></span><br><span class="line">        <span class="attr">max-wait:</span> <span class="string">100ms</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>注入Redis</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Autowired</span></span><br><span class="line"><span class="keyword">private</span> RedisTemplate redisTemplate;</span><br></pre></td></tr></table></figure>
+
+<p>RedisTemplate的两种序列化实践方案：</p>
+<p>方案一：</p>
+<ol>
+<li><p>自定义RedisTemplate</p>
+</li>
+<li><p>修改RedisTemplate的序列化器为GenericJackson2JsonRedisSerializer</p>
+</li>
+</ol>
+<p>方案二（推荐）：</p>
+<pre><code>      1. 使用StringRedisTemplate
+        2. 写入Redis时，手动把对象序列化为JSON
+        3. 读取Redis时，手动把读取到的JSON反序列化为对象
+</code></pre>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>非実在青少年</category>
+      </categories>
+      <tags>
+        <tag>非実在青少年</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Mybatis_learn</title>
     <url>/2022/04/27/Mybatis-learn/</url>
     <content><![CDATA[<h1 id="step"><a href="#step" class="headerlink" title="step"></a>step</h1><p><img src="https://cdn.jsdelivr.net/gh/avaritiachaos/shark-img/Snipaste_2021-09-08_00-00-00.png"></p>
@@ -152,99 +245,6 @@
 <p><img src="https://cdn.jsdelivr.net/gh/avaritiachaos/shark-img/Snipaste_2021-09-08_00-00-11.png"></p>
 <p>​                                                           ——————-END—————–</p>
 ]]></content>
-      <tags>
-        <tag>非実在青少年</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Redis</title>
-    <url>/2022/05/09/Redis/</url>
-    <content><![CDATA[<h1 id="Redis通用命令"><a href="#Redis通用命令" class="headerlink" title="Redis通用命令"></a>Redis通用命令</h1><span id="more"></span>
-<h2 id="Redis命令行客户端"><a href="#Redis命令行客户端" class="headerlink" title="Redis命令行客户端"></a>Redis命令行客户端</h2><p>Redis安装完成后就自带了命令行客户端：redis-cli，使用方式如下：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">redis-cli [options] [commonds]</span><br></pre></td></tr></table></figure>
-
-<p>其中常见的options有：</p>
-<ul>
-<li><code>-h 127.0.0.1</code>：指定要连接的redis节点的IP地址，默认是127.0.0.1</li>
-<li><code>-p 6379</code>：指定要连接的redis节点的端口，默认是6379</li>
-<li><code>-a 123321</code>：指定redis的访问密码</li>
-</ul>
-<p>其中的commonds就是Redis的操作命令，例如：</p>
-<ul>
-<li><code>ping</code>：与redis服务端做心跳测试，服务端正常会返回<code>pong</code></li>
-</ul>
-<p>不指定commond时，会进入<code>redis-cli</code>的交互控制台</p>
-<p>Redis默认有16个仓库，编号从0至15.  通过配置文件可以设置仓库数量，但是不超过16，并且不能自定义仓库名称。</p>
-<p>如果是基于redis-cli连接Redis服务，可以通过select命令来选择数据库：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 选择 0号库</span></span><br><span class="line">select 0</span><br></pre></td></tr></table></figure>
-
-
-
-<p>KEYS:查看符合模板的所有key，不建议在生产环境设备上使用</p>
-<p>DEL:删除一个key</p>
-<p>EXISTS：判断key是否存在</p>
-<p>EXPIRE：给一个key设置有效期，有效期到期时该key会被自动删除</p>
-<p>TTL：查看一个KEY的剩余有效期</p>
-<h2 id="String的常见命令"><a href="#String的常见命令" class="headerlink" title="String的常见命令"></a>String的常见命令</h2><ul>
-<li>SET:添加或者修改一个已经存在的一个String类型的键值对</li>
-<li>GET:根据key获取String类型的value</li>
-<li>MSET：批量添加多个String类型的value</li>
-<li>MGET：根据多个key获取多个String类型的value</li>
-<li>INCR：让一个整形的key自增1</li>
-<li>INCRBY:让一个整形的key自增并指定步长，例如：incrby num 2 让num值自增2</li>
-<li>INCRBYFLOAT:让一个浮点类型的数字自增并指定步长</li>
-<li>SETNX:添加一个String类型的键值对，前提是这个key不存在，否则不执行</li>
-<li>SETEX:添加一个String类型的键值对，并且指定有效期</li>
-</ul>
-<h1 id="Jedis使用的基本步骤"><a href="#Jedis使用的基本步骤" class="headerlink" title="Jedis使用的基本步骤"></a>Jedis使用的基本步骤</h1><ol>
-<li><p>引入依赖</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>redis.clients<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>jedis<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>4.2.0<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>创建Jedis对象，建立连接</p>
-</li>
-<li><p>使用Jedis，方法名与Redis命令一致</p>
-</li>
-<li><p>释放资源</p>
-</li>
-</ol>
-<p>例：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.fish.test;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.junit.jupiter.api.AfterEach;</span><br><span class="line"><span class="keyword">import</span> org.junit.jupiter.api.BeforeEach;</span><br><span class="line"><span class="keyword">import</span> org.junit.jupiter.api.Test;</span><br><span class="line"><span class="keyword">import</span> redis.clients.jedis.Jedis;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Map;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">JedisTest</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> Jedis jedis;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@BeforeEach</span></span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">setUp</span><span class="params">()</span>&#123;</span><br><span class="line"><span class="comment">//        1.建立连接</span></span><br><span class="line">        jedis=<span class="keyword">new</span> <span class="title class_">Jedis</span>(<span class="string">&quot;192.168.230.130&quot;</span>,<span class="number">6379</span>);</span><br><span class="line"><span class="comment">//        2. 设置密码</span></span><br><span class="line">        jedis.auth(<span class="string">&quot;1121&quot;</span>);</span><br><span class="line"><span class="comment">//        3.选择库</span></span><br><span class="line">        jedis.select(<span class="number">0</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">testString</span><span class="params">()</span>&#123;</span><br><span class="line"><span class="comment">//        存入数据</span></span><br><span class="line">        <span class="type">String</span> <span class="variable">result</span> <span class="operator">=</span> jedis.set(<span class="string">&quot;name&quot;</span>, <span class="string">&quot;ayame&quot;</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;result =&quot;</span> + result);</span><br><span class="line">        String name=jedis.get(<span class="string">&quot;name&quot;</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;name = &quot;</span>+name);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">testHash</span><span class="params">()</span>&#123;</span><br><span class="line">        jedis.hset(<span class="string">&quot;user:1&quot;</span>,<span class="string">&quot;name&quot;</span>,<span class="string">&quot;ayame&quot;</span>);</span><br><span class="line">        jedis.hset(<span class="string">&quot;user:1&quot;</span>,<span class="string">&quot;age&quot;</span>,<span class="string">&quot;23&quot;</span>);</span><br><span class="line">        Map&lt;String, String&gt; map = jedis.hgetAll(<span class="string">&quot;user:1&quot;</span>);</span><br><span class="line">        System.out.println(map);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@AfterEach</span></span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">tearDown</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(jedis != <span class="literal">null</span>)&#123;</span><br><span class="line">            jedis.close();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>改用连接池</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.fish.jedis.util;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> redis.clients.jedis.Jedis;</span><br><span class="line"><span class="keyword">import</span> redis.clients.jedis.JedisPool;</span><br><span class="line"><span class="keyword">import</span> redis.clients.jedis.JedisPoolConfig;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">JedisConnectionFactory</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> JedisPool jedisPool;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">static</span> &#123;</span><br><span class="line"><span class="comment">//        配置连接池</span></span><br><span class="line">        <span class="type">JedisPoolConfig</span> <span class="variable">poolConfig</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">JedisPoolConfig</span>();</span><br><span class="line"><span class="comment">//        最大连接数</span></span><br><span class="line">        poolConfig.setMaxTotal(<span class="number">8</span>);</span><br><span class="line"><span class="comment">//        最大空闲连接</span></span><br><span class="line">        poolConfig.setMaxIdle(<span class="number">8</span>);</span><br><span class="line"><span class="comment">//        最小空闲连接</span></span><br><span class="line">        poolConfig.setMinIdle(<span class="number">0</span>);</span><br><span class="line"><span class="comment">//        设置等待时间</span></span><br><span class="line">        poolConfig.setMaxWaitMillis(<span class="number">1000</span>);</span><br><span class="line"><span class="comment">//        创建连接池对象</span></span><br><span class="line">        jedisPool = <span class="keyword">new</span> <span class="title class_">JedisPool</span>(poolConfig,</span><br><span class="line">                <span class="string">&quot;192.168.230.130&quot;</span>, <span class="number">6379</span>, <span class="number">1000</span>, <span class="string">&quot;1121&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> Jedis <span class="title function_">getJedis</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> jedisPool.getResource();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>则建立连接改为：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">  <span class="meta">@BeforeEach</span></span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">setUp</span><span class="params">()</span>&#123;</span><br><span class="line"><span class="comment">//        1.建立连接</span></span><br><span class="line"><span class="comment">//        jedis=new Jedis(&quot;192.168.230.130&quot;,6379);</span></span><br><span class="line">       jedis=JedisConnectionFactory.getJedis();</span><br><span class="line"><span class="comment">//        2. 设置密码</span></span><br><span class="line">        jedis.auth(<span class="string">&quot;1121&quot;</span>);</span><br><span class="line"><span class="comment">//        3.选择库</span></span><br><span class="line">        jedis.select(<span class="number">0</span>);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-<h1 id="SpringDataRadis"><a href="#SpringDataRadis" class="headerlink" title="SpringDataRadis"></a>SpringDataRadis</h1><ol>
-<li><p>引入依赖</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--        redis依赖--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-data-redis<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--common-pool--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.commons<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>commons-pool2<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>配置redis</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">redis:</span></span><br><span class="line">    <span class="attr">host:</span> <span class="number">192.168</span><span class="number">.230</span><span class="number">.130</span></span><br><span class="line">    <span class="attr">port:</span> <span class="number">6379</span></span><br><span class="line">    <span class="attr">password:</span> <span class="number">1121</span></span><br><span class="line">    <span class="attr">lettuce:</span></span><br><span class="line">      <span class="attr">pool:</span></span><br><span class="line">        <span class="attr">max-active:</span> <span class="number">8</span></span><br><span class="line">        <span class="attr">min-idle:</span> <span class="number">0</span></span><br><span class="line">        <span class="attr">max-idle:</span> <span class="number">8</span></span><br><span class="line">        <span class="attr">max-wait:</span> <span class="string">100ms</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>注入Redis</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Autowired</span></span><br><span class="line"><span class="keyword">private</span> RedisTemplate redisTemplate;</span><br></pre></td></tr></table></figure>
-
-<p>RedisTemplate的两种序列化实践方案：</p>
-<p>方案一：</p>
-<ol>
-<li><p>自定义RedisTemplate</p>
-</li>
-<li><p>修改RedisTemplate的序列化器为GenericJackson2JsonRedisSerializer</p>
-</li>
-</ol>
-<p>方案二（推荐）：</p>
-<pre><code>      1. 使用StringRedisTemplate
-        2. 写入Redis时，手动把对象序列化为JSON
-        3. 读取Redis时，手动把读取到的JSON反序列化为对象
-</code></pre>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>非実在青少年</category>
-      </categories>
       <tags>
         <tag>非実在青少年</tag>
       </tags>
@@ -626,15 +626,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>java换jdk版本环境变量配置后不生效解决方法</title>
-    <url>/2022/05/07/java%E6%8D%A2jdk%E7%89%88%E6%9C%AC%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE%E5%90%8E%E4%B8%8D%E7%94%9F%E6%95%88%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</url>
-    <content><![CDATA[<p>把系统变量中path的C:\Program Files (x86)\Common Files\Oracle\Java\javapath删除即可</p>
-]]></content>
-      <tags>
-        <tag>非実在青少年</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>干了这杯22016年的艾岚茶</title>
     <url>/2020/10/08/island/</url>
     <content><![CDATA[<p>连着几天，把先前鸽着的岛给推完了，实在是有毒…<br><img src="https://cdn.jsdelivr.net/gh/avaritiachaos/shark-img/rinne.png"></p>
@@ -656,6 +647,15 @@
 ]]></content>
       <tags>
         <tag>Alice in Wonderland</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>java换jdk版本环境变量配置后不生效解决方法</title>
+    <url>/2022/05/07/java%E6%8D%A2jdk%E7%89%88%E6%9C%AC%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE%E5%90%8E%E4%B8%8D%E7%94%9F%E6%95%88%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<p>把系统变量中path的C:\Program Files (x86)\Common Files\Oracle\Java\javapath删除即可</p>
+]]></content>
+      <tags>
+        <tag>非実在青少年</tag>
       </tags>
   </entry>
   <entry>
@@ -742,6 +742,12 @@
       </tags>
   </entry>
   <entry>
+    <title>本来就没有价值</title>
+    <url>/2022/05/18/%E6%9C%AC%E6%9D%A5%E5%B0%B1%E6%B2%A1%E6%9C%89%E4%BB%B7%E5%80%BC/</url>
+    <content><![CDATA[<p>感觉已经受不了自己写的这些烂货笔记了。但是猴年马月也不会有东西能看的</p>
+]]></content>
+  </entry>
+  <entry>
     <title>反射</title>
     <url>/2022/05/02/%E5%8F%8D%E5%B0%84/</url>
     <content><![CDATA[<h1 id="通过反射获取类的Class对象"><a href="#通过反射获取类的Class对象" class="headerlink" title="通过反射获取类的Class对象"></a>通过反射获取类的Class对象</h1><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Class.forName(<span class="string">&quot;&quot;</span>);</span><br></pre></td></tr></table></figure>
@@ -761,11 +767,5 @@
       <tags>
         <tag>非実在青少年</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>本来就没有价值</title>
-    <url>/2022/05/18/%E6%9C%AC%E6%9D%A5%E5%B0%B1%E6%B2%A1%E6%9C%89%E4%BB%B7%E5%80%BC/</url>
-    <content><![CDATA[<p>感觉已经受不了自己写的这些烂货笔记了。但是猴年马月也不会有东西能看的</p>
-]]></content>
   </entry>
 </search>
