@@ -79,13 +79,15 @@
 
 
 
-<meta name="description" content="This is a Shark">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Shark">
-<meta property="og:url" content="http://example.com/tags/Alice-in-Wonderland/index.html">
+<meta name="description" content="通过反射获取类的Class对象1Class.forName(&quot;&quot;);">
+<meta property="og:type" content="article">
+<meta property="og:title" content="反射">
+<meta property="og:url" content="http://example.com/2022/05/02/%E5%8F%8D%E5%B0%84/index.html">
 <meta property="og:site_name" content="Shark">
-<meta property="og:description" content="This is a Shark">
+<meta property="og:description" content="通过反射获取类的Class对象1Class.forName(&quot;&quot;);">
 <meta property="og:locale">
+<meta property="article:published_time" content="2022-05-02T07:29:32.000Z">
+<meta property="article:modified_time" content="2022-05-19T01:43:37.201Z">
 <meta property="article:author" content="ghost">
 <meta name="twitter:card" content="summary">
 
@@ -117,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://example.com/tags/Alice-in-Wonderland/"/>
+  <link rel="canonical" href="http://example.com/2022/05/02/反射/"/>
 
 
 
 
 
-  <title>标签: Alice in Wonderland | Shark</title>
+  <title>反射 | Shark</title>
   
 
 
@@ -142,7 +144,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -270,54 +272,195 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>Alice in Wonderland<small>标签</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/02/%E5%8F%8D%E5%B0%84/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/header.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Shark">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2020/10/08/island/" itemprop="url">
-              
-                <span itemprop="name">干了这杯22016年的艾岚茶</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">反射</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2020-10-08T01:43:00+08:00"
-              content="2020-10-08" >
-          10-08
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+          
 
-    </header>
-  </article>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2022-05-02T15:29:32+08:00">
+                2022-05-02
+              </time>
+            
 
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  218
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+     
+      
+      
+
+      
+        <h1 id="通过反射获取类的Class对象"><a href="#通过反射获取类的Class对象" class="headerlink" title="通过反射获取类的Class对象"></a>通过反射获取类的Class对象</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Class.forName(<span class="string">&quot;&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
+
+<p>一个类在内存中只有一个Class对象</p>
+<p>一个类被加载后，类的整个结构都会被封装在Class对象中</p>
+<p>只要元素类型与维度一样，就是同一个Class</p>
+<h1 id="通过反射调用普通方法"><a href="#通过反射调用普通方法" class="headerlink" title="通过反射调用普通方法"></a>通过反射调用普通方法</h1><p>通过反射获取一个方法，获取之后用该方法调用invoke方法则可调用方法</p>
+<p>如果该方法为私有，则也可调用setAccessible（关闭安全检测），参数设置为true，</p>
+<p>则可以访问私有方法</p>
+<h1 id="通过反射操作属性"><a href="#通过反射操作属性" class="headerlink" title="通过反射操作属性"></a>通过反射操作属性</h1><p>通过反射获得类的私有属性后，不能直接操作私有属性，但用该属性调用setAccessible（关闭安全检测），参数设置为true，</p>
+<p>则可以修改私有属性</p>
+<p><strong>另外关闭安全检测可以提高一点性能</strong></p>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2022/04/27/Mybatis-learn/" rel="next" title="Mybatis_learn">
+                <i class="fa fa-chevron-left"></i> Mybatis_learn
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2022/05/06/SSMP%E6%95%B4%E5%90%88%E6%A1%88%E4%BE%8B/" rel="prev" title="SSMP整合案例">
+                SSMP整合案例 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -325,6 +468,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -346,8 +493,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -437,6 +593,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%80%9A%E8%BF%87%E5%8F%8D%E5%B0%84%E8%8E%B7%E5%8F%96%E7%B1%BB%E7%9A%84Class%E5%AF%B9%E8%B1%A1"><span class="nav-number">1.</span> <span class="nav-text">通过反射获取类的Class对象</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%80%9A%E8%BF%87%E5%8F%8D%E5%B0%84%E8%B0%83%E7%94%A8%E6%99%AE%E9%80%9A%E6%96%B9%E6%B3%95"><span class="nav-number">2.</span> <span class="nav-text">通过反射调用普通方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%80%9A%E8%BF%87%E5%8F%8D%E5%B0%84%E6%93%8D%E4%BD%9C%E5%B1%9E%E6%80%A7"><span class="nav-number">3.</span> <span class="nav-text">通过反射操作属性</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -650,6 +822,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 

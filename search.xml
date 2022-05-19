@@ -90,6 +90,389 @@
 ]]></content>
   </entry>
   <entry>
+    <title>docker</title>
+    <url>/2022/05/07/docker/</url>
+    <content><![CDATA[<h1 id="Centos7安装Docker"><a href="#Centos7安装Docker" class="headerlink" title="Centos7安装Docker"></a>Centos7安装Docker</h1><h1 id="0-安装Docker"><a href="#0-安装Docker" class="headerlink" title="0.安装Docker"></a>0.安装Docker</h1><p>Docker 分为 CE 和 EE 两大版本。CE 即社区版（免费，支持周期 7 个月），EE 即企业版，强调安全，付费使用，支持周期 24 个月。</p>
+<p>Docker CE 分为 <code>stable</code> <code>test</code> 和 <code>nightly</code> 三个更新频道。</p>
+<p>官方网站上有各种环境下的 <a href="https://docs.docker.com/install/">安装指南</a>，这里主要介绍 Docker CE 在 CentOS上的安装。<span id="more"></span></p>
+<h1 id="1-CentOS安装Docker"><a href="#1-CentOS安装Docker" class="headerlink" title="1.CentOS安装Docker"></a>1.CentOS安装Docker</h1><p>Docker CE 支持 64 位版本 CentOS 7，并且要求内核版本不低于 3.10， CentOS 7 满足最低内核的要求，所以我们在CentOS 7安装Docker。</p>
+<h2 id="1-1-卸载（可选）"><a href="#1-1-卸载（可选）" class="headerlink" title="1.1.卸载（可选）"></a>1.1.卸载（可选）</h2><p>如果之前安装过旧版本的Docker，可以使用下面命令卸载：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">yum remove docker \</span><br><span class="line">                  docker-client \</span><br><span class="line">                  docker-client-latest \</span><br><span class="line">                  docker-common \</span><br><span class="line">                  docker-latest \</span><br><span class="line">                  docker-latest-logrotate \</span><br><span class="line">                  docker-logrotate \</span><br><span class="line">                  docker-selinux \</span><br><span class="line">                  docker-engine-selinux \</span><br><span class="line">                  docker-engine \</span><br><span class="line">                  docker-ce</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="1-2-安装docker"><a href="#1-2-安装docker" class="headerlink" title="1.2.安装docker"></a>1.2.安装docker</h2><p>首先需要大家虚拟机联网，安装yum工具</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">yum install -y yum-utils \</span><br><span class="line">           device-mapper-persistent-data \</span><br><span class="line">           lvm2 --skip-broken</span><br></pre></td></tr></table></figure>
+
+
+
+<p>然后更新本地镜像源：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">设置docker镜像源</span></span><br><span class="line">yum-config-manager \</span><br><span class="line">    --add-repo \</span><br><span class="line">    https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo</span><br><span class="line">    </span><br><span class="line">sed -i &#x27;s/download.docker.com/mirrors.aliyun.com\/docker-ce/g&#x27; /etc/yum.repos.d/docker-ce.repo</span><br><span class="line"></span><br><span class="line">yum makecache fast</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<p>然后输入命令：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">yum install -y docker-ce</span><br></pre></td></tr></table></figure>
+
+<p>docker-ce为社区免费版本。稍等片刻，docker即可安装成功。</p>
+<h2 id="1-3-启动docker"><a href="#1-3-启动docker" class="headerlink" title="1.3.启动docker"></a>1.3.启动docker</h2><p>Docker应用需要用到各种端口，逐一去修改防火墙设置。非常麻烦，因此建议大家直接关闭防火墙！</p>
+<p>启动docker前，一定要关闭防火墙后！！</p>
+<p>启动docker前，一定要关闭防火墙后！！</p>
+<p>启动docker前，一定要关闭防火墙后！！</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 关闭</span></span><br><span class="line">systemctl stop firewalld</span><br><span class="line"><span class="comment"># 禁止开机启动防火墙</span></span><br><span class="line">systemctl <span class="built_in">disable</span> firewalld</span><br></pre></td></tr></table></figure>
+
+
+
+<p>通过命令启动docker：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">systemctl start docker  <span class="comment"># 启动docker服务</span></span><br><span class="line"></span><br><span class="line">systemctl stop docker  <span class="comment"># 停止docker服务</span></span><br><span class="line"></span><br><span class="line">systemctl restart docker  <span class="comment"># 重启docker服务</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>然后输入命令，可以查看docker版本：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker -v</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="1-4-配置镜像加速"><a href="#1-4-配置镜像加速" class="headerlink" title="1.4.配置镜像加速"></a>1.4.配置镜像加速</h2><p>docker官方镜像仓库网速较差，我们需要设置国内镜像服务：</p>
+<p>参考阿里云的镜像加速文档：<a href="https://cr.console.aliyun.com/cn-hangzhou/instances/mirrors">https://cr.console.aliyun.com/cn-hangzhou/instances/mirrors</a></p>
+<h1 id="2-CentOS7安装DockerCompose"><a href="#2-CentOS7安装DockerCompose" class="headerlink" title="2.CentOS7安装DockerCompose"></a>2.CentOS7安装DockerCompose</h1><h2 id="2-1-下载"><a href="#2-1-下载" class="headerlink" title="2.1.下载"></a>2.1.下载</h2><p>Linux下需要通过命令下载：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 安装</span></span><br><span class="line">curl -L https://github.com/docker/compose/releases/download/1.23.1/docker-compose-`<span class="built_in">uname</span> -s`-`<span class="built_in">uname</span> -m` &gt; /usr/local/bin/docker-compose</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="2-2-修改文件权限"><a href="#2-2-修改文件权限" class="headerlink" title="2.2.修改文件权限"></a>2.2.修改文件权限</h2><p>修改文件权限：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 修改权限</span></span><br><span class="line"><span class="built_in">chmod</span> +x /usr/local/bin/docker-compose</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="2-3-Base自动补全命令："><a href="#2-3-Base自动补全命令：" class="headerlink" title="2.3.Base自动补全命令："></a>2.3.Base自动补全命令：</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 补全命令</span></span><br><span class="line">curl -L https://raw.githubusercontent.com/docker/compose/1.29.1/contrib/completion/bash/docker-compose &gt; /etc/bash_completion.d/docker-compose</span><br></pre></td></tr></table></figure>
+
+<p>如果这里出现错误，需要修改自己的hosts文件：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">&quot;199.232.68.133 raw.githubusercontent.com&quot;</span> &gt;&gt; /etc/hosts</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h1 id="3-Docker镜像仓库"><a href="#3-Docker镜像仓库" class="headerlink" title="3.Docker镜像仓库"></a>3.Docker镜像仓库</h1><p>搭建镜像仓库可以基于Docker官方提供的DockerRegistry来实现。</p>
+<p>官网地址：<a href="https://hub.docker.com/_/registry">https://hub.docker.com/_/registry</a></p>
+<h2 id="3-1-简化版镜像仓库"><a href="#3-1-简化版镜像仓库" class="headerlink" title="3.1.简化版镜像仓库"></a>3.1.简化版镜像仓库</h2><p>Docker官方的Docker Registry是一个基础版本的Docker镜像仓库，具备仓库管理的完整功能，但是没有图形化界面。</p>
+<p>搭建方式比较简单，命令如下：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">docker run -d \</span><br><span class="line">    --restart=always \</span><br><span class="line">    --name registry	\</span><br><span class="line">    -p 5000:5000 \</span><br><span class="line">    -v registry-data:/var/lib/registry \</span><br><span class="line">    registry</span><br></pre></td></tr></table></figure>
+
+
+
+<p>命令中挂载了一个数据卷registry-data到容器内的&#x2F;var&#x2F;lib&#x2F;registry 目录，这是私有镜像库存放数据的目录。</p>
+<p>访问<a href="http://yourip:5000/v2/_catalog">http://YourIp:5000/v2/_catalog</a> 可以查看当前私有镜像服务中包含的镜像</p>
+<h2 id="3-2-带有图形化界面版本"><a href="#3-2-带有图形化界面版本" class="headerlink" title="3.2.带有图形化界面版本"></a>3.2.带有图形化界面版本</h2><p>使用DockerCompose部署带有图象界面的DockerRegistry，命令如下：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">&#x27;3.0&#x27;</span></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">registry:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">registry</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./registry-data:/var/lib/registry</span></span><br><span class="line">  <span class="attr">ui:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">joxit/docker-registry-ui:static</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">8080</span><span class="string">:80</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">REGISTRY_TITLE=传智教育私有仓库</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">REGISTRY_URL=http://registry:5000</span></span><br><span class="line">    <span class="attr">depends_on:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">registry</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="3-3-配置Docker信任地址"><a href="#3-3-配置Docker信任地址" class="headerlink" title="3.3.配置Docker信任地址"></a>3.3.配置Docker信任地址</h2><p>我们的私服采用的是http协议，默认不被Docker信任，所以需要做一个配置：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 打开要修改的文件</span></span><br><span class="line">vi /etc/docker/daemon.json</span><br><span class="line"><span class="comment"># 添加内容：</span></span><br><span class="line"><span class="string">&quot;insecure-registries&quot;</span>:[<span class="string">&quot;http://192.168.150.101:8080&quot;</span>]</span><br><span class="line"><span class="comment"># 重加载</span></span><br><span class="line">systemctl daemon-reload</span><br><span class="line"><span class="comment"># 重启docker</span></span><br><span class="line">systemctl restart docker</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="基本操作-镜像"><a href="#基本操作-镜像" class="headerlink" title="基本操作-镜像"></a>基本操作-镜像</h1><p>例子：从DockerHub中拉取一个nginx镜像并查看</p>
+<p>命令：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">docker pull nginx</span><br></pre></td></tr></table></figure>
+
+<p>查看拉取到的镜像：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">docker images</span><br></pre></td></tr></table></figure>
+
+<p>导出镜像：</p>
+<p>可以用以下命令查看具体怎么导出</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">docker save --<span class="built_in">help</span></span><br></pre></td></tr></table></figure>
+
+<p>示例：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">docker save -o nginx.tar nginx:latest</span><br></pre></td></tr></table></figure>
+
+
+
+<p>删除镜像示例：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">docker rmi nginx:latest</span><br></pre></td></tr></table></figure>
+
+
+
+<p>加载镜像：</p>
+<p>可以用以下命令查看具体怎么加载</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">docker load --<span class="built_in">help</span></span><br></pre></td></tr></table></figure>
+
+<p>示例：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">docker load -i nginx.tar</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="容器相关命令"><a href="#容器相关命令" class="headerlink" title="容器相关命令"></a>容器相关命令</h1><p>感觉容器可以理解为进程</p>
+<p>查看所有运行的容器及状态：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">docker ps</span><br></pre></td></tr></table></figure>
+
+<p>进入容器执行命令：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">docker <span class="built_in">exec</span></span><br></pre></td></tr></table></figure>
+
+<p>查看容器运行日志：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">docker logs</span><br></pre></td></tr></table></figure>
+
+<p>删除指定容器：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">docker <span class="built_in">rm</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>docker run命令的常见参数：</p>
+<ul>
+<li><p>–name：指定容器名称</p>
+</li>
+<li><p>-p：指定端口映射</p>
+</li>
+<li><p>-d: 让容器后台运行</p>
+</li>
+</ul>
+<p>查看容器日志的命令：</p>
+<ul>
+<li><p>docker logs</p>
+</li>
+<li><p>添加 -f 参数可以持续查看日志</p>
+</li>
+</ul>
+<p>查看容器状态：</p>
+<ul>
+<li>docker ps</li>
+</ul>
+<p>案例：</p>
+<p>进入Nginx容器：</p>
+<ol>
+<li><p>进入刚刚创建的nginx容器</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> -it mn bash</span><br></pre></td></tr></table></figure>
+
+<p>命令解读：</p>
+<ul>
+<li>docker exec ：进入容器内部，执行一个命令</li>
+<li>-it： 给当前进入的容器创建一个标准输入、输出终端，允许我们与容器交互</li>
+<li>mn：要进入的容器的名称</li>
+<li>bash ： 进入容器后执行的命令，bash是一个linux终端交互命令</li>
+</ul>
+</li>
+</ol>
+<h1 id="数据卷"><a href="#数据卷" class="headerlink" title="数据卷"></a>数据卷</h1><p>作用：</p>
+<ul>
+<li>将容器与数据分离，解耦合，方便操作容器内数据，保证数据安全</li>
+</ul>
+<p>基本语法：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">docker volume[COMMAND]</span><br></pre></td></tr></table></figure>
+
+<p>docker volumem命令是数据卷操作，根据命令后跟随的command来确定下一步的操作：</p>
+<ul>
+<li>create 创建一个volume</li>
+<li>inspect 显示一个或多个volume的信息</li>
+<li>ls 列出所有的volume</li>
+<li>prune 删除未使用的volume</li>
+<li>rm 删除一个或多个指定的volume</li>
+</ul>
+<p>数据卷挂载：</p>
+<ul>
+<li>-v volumeName：&#x2F;targetContainerPath</li>
+<li>如果容器运行时volume不存在，会被自动创建出来</li>
+</ul>
+<h1 id="自定义镜像-镜像结构"><a href="#自定义镜像-镜像结构" class="headerlink" title="自定义镜像-镜像结构"></a>自定义镜像-镜像结构</h1><p>镜像是分层结构，每一层称为一个Layer</p>
+<ul>
+<li>Baselmage层：包含基本的系统函数库、系统变量、文件系统</li>
+<li>Entrypoint：入口，是镜像中应用启动的命令</li>
+<li>其他：在BaseImae基础上添加依赖、安装程序、完成整个应用的安装和配置</li>
+</ul>
+<p>运行一个java项目：</p>
+<p>命令：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">docker build -t javaweb:1.0 .</span><br></pre></td></tr></table></figure>
+
+<p>注意最后那个点不要忘了，这个点代表dockerfile所在的目录</p>
+<p>冒号不要写成中文的</p>
+<p>-t的全称是tag，后面参数为名字和版本（自己取）</p>
+<h2 id="dockerfile"><a href="#dockerfile" class="headerlink" title="dockerfile"></a>dockerfile</h2><p>关于<code>EXPOSE</code>命令,遇到下面几个问题：</p>
+<ol>
+<li>这样声明暴露端口就会把对应端口的服务向外公开吗？</li>
+<li>如果我Docker中的服务端口在5000，但我在Dockerfile中声明暴露80，我的服务还能从外部访问吗？</li>
+</ol>
+<p>最后经过查阅文档也得到了解答，顺便跟大家一起分享下：</p>
+<ul>
+<li><p>首先 <code>EXPOSE</code>命令只是起到一个声明的作用。告诉查看Dockerfile的人，这个容器想暴露80这个端口，如果你有之后一些关于容器端口的操作可以使用80端口。</p>
+</li>
+<li><p>在宿主机上运行Docker时并不会因为这个声明应用就会开启这个端口的服务，如果你想在宿主机上访问对应80端口的服务是，需要使用命令将端口进行映射。</p>
+</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">docker run -p 宿主机端口:容器端口 image	</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>第二个问题，其实已经很明显了，上面说到<code>Expose</code>只是起到了声明作用，不是说我写了80端口，这个容器就只能使用80了，如果你想5000端口也可以向外暴露，也可以使用命令：</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">docker run -p 宿主机端口:5000 image </span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <tags>
+        <tag>非実在青少年</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>SSMP整合案例</title>
+    <url>/2022/05/06/SSMP%E6%95%B4%E5%90%88%E6%A1%88%E4%BE%8B/</url>
+    <content><![CDATA[<h1 id="实体类"><a href="#实体类" class="headerlink" title="实体类"></a>实体类</h1><ol>
+<li><p>勾选SpringMVC与Mysql坐标</p>
+</li>
+<li><p>修改配置文件为yml格式</p>
+</li>
+<li><p>设置端口为80方便访问</p>
+<span id="more"></span></li>
+</ol>
+<h1 id="mybatis-plus开日志"><a href="#mybatis-plus开日志" class="headerlink" title="mybatis-plus开日志"></a>mybatis-plus开日志</h1><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">mybatis-plus:</span></span><br><span class="line">  <span class="attr">configuration:</span></span><br><span class="line">    <span class="attr">log-impl:</span> <span class="string">org.apache.ibatis.logging.stdout.StdOutImpl</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="分页"><a href="#分页" class="headerlink" title="分页"></a>分页</h1><p>分页操作需要设定分页对象IPage</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">getPageTest</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="type">IPage</span> <span class="variable">page</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Page</span>(<span class="number">1</span>, <span class="number">5</span>);</span><br><span class="line">    bookDao.selectPage(page,<span class="literal">null</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>另外还要配置MybatisPlus拦截器（作用动态地拼limit语句）</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">MPConfig</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="keyword">public</span> MybatisPlusInterceptor <span class="title function_">mybatisPlusInterceptor</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="type">MybatisPlusInterceptor</span> <span class="variable">mybatisPlusInterceptor1</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">MybatisPlusInterceptor</span>();</span><br><span class="line">        mybatisPlusInterceptor1.addInnerInterceptor(<span class="keyword">new</span> <span class="title class_">PaginationInnerInterceptor</span>());</span><br><span class="line">        <span class="keyword">return</span> mybatisPlusInterceptor1;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="条件查询"><a href="#条件查询" class="headerlink" title="条件查询"></a>条件查询</h1><ol>
+<li><p>使用QueryWrapper对象封装查询条件</p>
+</li>
+<li><p>推荐使用LambdaQueryWrapper 对象</p>
+</li>
+<li><p>所有查询操作封装成方法调用</p>
+</li>
+<li><p>查询条件支持动态条件拼装</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">getByTest</span><span class="params">()</span>&#123;</span><br><span class="line">    String name=<span class="string">&quot;1&quot;</span>;</span><br><span class="line">    LambdaQueryWrapper&lt;Book&gt; bookLambdaQueryWrapper = <span class="keyword">new</span> <span class="title class_">LambdaQueryWrapper</span>&lt;&gt;();</span><br><span class="line">    bookLambdaQueryWrapper.like(name!=<span class="literal">null</span>,Book::getName,name);</span><br><span class="line">    bookDao.selectList(bookLambdaQueryWrapper);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h1 id="业务层开发"><a href="#业务层开发" class="headerlink" title="业务层开发"></a>业务层开发</h1><p>Service层接口定义与数据层接口定义具有较大区别，不要混用：</p>
+<ul>
+<li><p>selectByUserNameAndPassword(String username,String password);</p>
+</li>
+<li><p>login(String username,String password);</p>
+</li>
+</ul>
+<p><strong>注意测试业务层 ！！！</strong></p>
+<h2 id="快速开发方案"><a href="#快速开发方案" class="headerlink" title="快速开发方案"></a>快速开发方案</h2><p>使用MybatisPlus提供有业务层通用接口（Iserivce）</p>
+<h1 id="基于Restful制作表现层接口"><a href="#基于Restful制作表现层接口" class="headerlink" title="基于Restful制作表现层接口"></a>基于Restful制作表现层接口</h1><ul>
+<li><p>新增 ：POST</p>
+</li>
+<li><p>删除： DELETE</p>
+</li>
+<li><p>修改： PUT</p>
+</li>
+<li><p>查询： GET</p>
+<h2 id="接受参数"><a href="#接受参数" class="headerlink" title="接受参数"></a>接受参数</h2><ul>
+<li>实体数据：@RequestBody</li>
+<li>路径变量： @PathVariable</li>
+</ul>
+</li>
+</ul>
+<h1 id="表现层消息一致性处理"><a href="#表现层消息一致性处理" class="headerlink" title="表现层消息一致性处理"></a>表现层消息一致性处理</h1><ul>
+<li><p>设计表现层返回结果的模型类，用于后端与前端进行数据格式统一，也称前后端数据协议</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="meta">@AllArgsConstructor</span></span><br><span class="line"><span class="meta">@NoArgsConstructor</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">R</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> Boolean flag;</span><br><span class="line">    <span class="keyword">private</span> Object data;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">R</span><span class="params">(Boolean flag)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.flag = flag;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>表现层接口统一返回值类型结果</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@RestController</span></span><br><span class="line"><span class="meta">@RequestMapping(&quot;/books&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">BookController</span> &#123;</span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">public</span> IBookService bookService;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@GetMapping</span></span><br><span class="line">    <span class="keyword">public</span> R <span class="title function_">getAll</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">R</span>(<span class="literal">true</span>,bookService.list());</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@PostMapping</span></span><br><span class="line">    <span class="keyword">public</span> R <span class="title function_">save</span><span class="params">(<span class="meta">@RequestBody</span> Book book)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">R</span>(bookService.save(book));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@PutMapping</span></span><br><span class="line">    <span class="keyword">public</span> R <span class="title function_">update</span><span class="params">(<span class="meta">@RequestBody</span> Book book)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">R</span>(bookService.updateById(book)) ;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@DeleteMapping(&quot;&#123;id&#125;&quot;)</span></span><br><span class="line">    <span class="keyword">public</span> R <span class="title function_">delete</span><span class="params">(<span class="meta">@PathVariable</span> Integer id)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">R</span>(<span class="literal">true</span>,bookService.removeById(id)) ;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@GetMapping(&quot;/&#123;id&#125;&quot;)</span></span><br><span class="line">    <span class="keyword">public</span> R <span class="title function_">getById</span><span class="params">(<span class="meta">@PathVariable</span> Integer id)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">R</span>(<span class="literal">true</span>,bookService.getById(id)) ;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@GetMapping(&quot;/&#123;currentPage&#125;/&#123;pageSize&#125;&quot;)</span></span><br><span class="line">    <span class="keyword">public</span> R <span class="title function_">getPage</span><span class="params">(<span class="meta">@PathVariable(&quot;currentPage&quot;)</span> <span class="type">int</span> currentPage, <span class="meta">@PathVariable(&quot;pageSize&quot;)</span> <span class="type">int</span>  pageSize)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">R</span>(<span class="literal">true</span>,bookService.getPage(currentPage,pageSize)) ;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p>将查询数据返回到页面，利用前端数据双向绑定进行数据展示</p>
+<h1 id="对异常进行统一处理，出现异常后，返回指定消息"><a href="#对异常进行统一处理，出现异常后，返回指定消息" class="headerlink" title="对异常进行统一处理，出现异常后，返回指定消息"></a>对异常进行统一处理，出现异常后，返回指定消息</h1><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//作为SpringMVC的异常处理器</span></span><br><span class="line"><span class="comment">//@ControllerAdvice</span></span><br><span class="line"><span class="meta">@RestControllerAdvice</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ProjectExceptionAdvice</span> &#123;</span><br><span class="line"><span class="comment">//   拦截所有的异常信息</span></span><br><span class="line">    <span class="meta">@ExceptionHandler</span></span><br><span class="line">    <span class="keyword">public</span> R <span class="title function_">doException</span><span class="params">(Exception e)</span>&#123;</span><br><span class="line"><span class="comment">//        记录日志</span></span><br><span class="line"><span class="comment">//        通知运维</span></span><br><span class="line"><span class="comment">//        通知开发</span></span><br><span class="line">        e.printStackTrace();</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">R</span>(<span class="string">&quot;服务器故障，请稍后再试！&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>修改表现层返回结果的模型类，封装出现异常后对应的信息</p>
+<p>flag：false</p>
+<p>Data：null</p>
+<p>消息（msg）：要显示信息</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.fish.service.controller.utils;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> lombok.AllArgsConstructor;</span><br><span class="line"><span class="keyword">import</span> lombok.Data;</span><br><span class="line"><span class="keyword">import</span> lombok.NoArgsConstructor;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">R</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> Boolean flag;</span><br><span class="line">    <span class="keyword">private</span> Object data;</span><br><span class="line">    <span class="keyword">private</span> String msg;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">R</span><span class="params">()</span> &#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">R</span><span class="params">(Boolean flag)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.flag = flag;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">R</span><span class="params">(Boolean flag, Object data)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.flag = flag;</span><br><span class="line">        <span class="built_in">this</span>.data = data;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">R</span><span class="params">(Boolean flag, String msg)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.flag = flag;</span><br><span class="line">        <span class="built_in">this</span>.msg = msg;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">R</span><span class="params">(String msg)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.flag = <span class="literal">false</span>;</span><br><span class="line">        <span class="built_in">this</span>.msg = msg;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>可以在表现层Controller中进行消息统一处理</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">    <span class="meta">@PostMapping</span></span><br><span class="line">    <span class="keyword">public</span> R <span class="title function_">save</span><span class="params">(<span class="meta">@RequestBody</span> Book book)</span> <span class="keyword">throws</span> IOException &#123;</span><br><span class="line"></span><br><span class="line"><span class="comment">//        if(true) throw new IOException();</span></span><br><span class="line">        <span class="keyword">if</span> (book.getName().equals(<span class="string">&quot;123&quot;</span>)) <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">IOException</span>();</span><br><span class="line">        <span class="type">boolean</span> <span class="variable">flag</span> <span class="operator">=</span> bookService.save(book);</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">R</span>(flag, flag ? <span class="string">&quot;添加成功^_^&quot;</span> : <span class="string">&quot;添加失败-_-!&quot;</span>);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>目的：国际化</p>
+<p>另外改过后的页面消息处理：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//添加</span></span><br><span class="line"><span class="title function_">handleAdd</span>(<span class="params"></span>) &#123;</span><br><span class="line">    axios.<span class="title function_">post</span>(<span class="string">&quot;/books&quot;</span>, <span class="variable language_">this</span>.<span class="property">formData</span>).<span class="title function_">then</span>(<span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="comment">//判断当前操作是否成功</span></span><br><span class="line">        <span class="keyword">if</span> (res.<span class="property">data</span>.<span class="property">flag</span>) &#123;</span><br><span class="line">            <span class="comment">//    1.关闭弹层</span></span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">dialogFormVisible</span> = <span class="literal">false</span>;</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">$message</span>.<span class="title function_">success</span>(res.<span class="property">data</span>.<span class="property">msg</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">$message</span>.<span class="title function_">error</span>(res.<span class="property">data</span>.<span class="property">msg</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;).<span class="title function_">finally</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">        <span class="comment">//    2.重新加载数据</span></span><br><span class="line">        <span class="variable language_">this</span>.<span class="title function_">getAll</span>();</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<h1 id="分页功能"><a href="#分页功能" class="headerlink" title="分页功能"></a>分页功能</h1><ul>
+<li>页面使用el分页组件添加分页功能</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--分页组件--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;pagination-container&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">el-pagination</span></span></span><br><span class="line"><span class="tag">            <span class="attr">class</span>=<span class="string">&quot;pagiantion&quot;</span></span></span><br><span class="line"><span class="tag"></span></span><br><span class="line"><span class="tag">            @<span class="attr">current-change</span>=<span class="string">&quot;handleCurrentChange&quot;</span></span></span><br><span class="line"><span class="tag"></span></span><br><span class="line"><span class="tag">            <span class="attr">:current-page</span>=<span class="string">&quot;pagination.currentPage&quot;</span></span></span><br><span class="line"><span class="tag"></span></span><br><span class="line"><span class="tag">            <span class="attr">:page-size</span>=<span class="string">&quot;pagination.pageSize&quot;</span></span></span><br><span class="line"><span class="tag"></span></span><br><span class="line"><span class="tag">            <span class="attr">layout</span>=<span class="string">&quot;total, prev, pager, next, jumper&quot;</span></span></span><br><span class="line"><span class="tag"></span></span><br><span class="line"><span class="tag">            <span class="attr">:total</span>=<span class="string">&quot;pagination.total&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;/<span class="name">el-pagination</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>定义分页组件需要使用的数据并将数据绑定到分页组件</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="attr">data</span>: &#123;</span><br><span class="line">    <span class="attr">pagination</span>: &#123;<span class="comment">//分页相关模型数据</span></span><br><span class="line">        <span class="attr">currentPage</span>: <span class="number">1</span>,<span class="comment">//当前页码</span></span><br><span class="line">        <span class="attr">pageSize</span>: <span class="number">10</span>,<span class="comment">//每页显示的记录数</span></span><br><span class="line">        <span class="attr">total</span>: <span class="number">0</span><span class="comment">//总记录数</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>替换查询全部功能为分页功能</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//分页查询</span></span><br><span class="line"><span class="title function_">getAll</span>(<span class="params"></span>) &#123;</span><br><span class="line">    axios.<span class="title function_">get</span>(<span class="string">&quot;/books/&quot;</span>+<span class="variable language_">this</span>.<span class="property">pagination</span>.<span class="property">currentPage</span>+<span class="string">&quot;/&quot;</span>+<span class="variable language_">this</span>.<span class="property">pagination</span>.<span class="property">pageSize</span>).<span class="title function_">then</span>(<span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">pagination</span>.<span class="property">pagesize</span>=res.<span class="property">data</span>.<span class="property">data</span>.<span class="property">size</span>;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">pagination</span>.<span class="property">currentPage</span>=res.<span class="property">data</span>.<span class="property">data</span>.<span class="property">current</span>;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">pagination</span>.<span class="property">total</span>=res.<span class="property">data</span>.<span class="property">data</span>.<span class="property">total</span>;</span><br><span class="line">        <span class="comment">// console.log(res.data);</span></span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">dataList</span> = res.<span class="property">data</span>.<span class="property">data</span>.<span class="property">records</span>;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;,</span><br><span class="line"><span class="comment">//切换页码</span></span><br><span class="line"><span class="title function_">handleCurrentChange</span>(<span class="params">currentPage</span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">pagination</span>.<span class="property">currentPage</span>=currentPage;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="title function_">getAll</span>();</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="条件查询-1"><a href="#条件查询-1" class="headerlink" title="条件查询"></a>条件查询</h1><p>查询条件数据封装</p>
+<ul>
+<li><p>单独封装</p>
+</li>
+<li><p>与分页操作混合封装</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="attr">pagination</span>: &#123;<span class="comment">//分页相关模型数据</span></span><br><span class="line">    <span class="attr">currentPage</span>: <span class="number">1</span>,<span class="comment">//当前页码</span></span><br><span class="line">    <span class="attr">pageSize</span>: <span class="number">10</span>,<span class="comment">//每页显示的记录数</span></span><br><span class="line">    <span class="attr">total</span>: <span class="number">0</span>,<span class="comment">//总记录数</span></span><br><span class="line">    <span class="attr">type</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">    <span class="attr">name</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">    <span class="attr">description</span>: <span class="string">&quot;&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>页面数据模型绑定</p>
+</li>
+</ul>
+  <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;filter-container&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">el-input</span> <span class="attr">placeholder</span>=<span class="string">&quot;图书类别&quot;</span> <span class="attr">v-model</span>=<span class="string">&quot;pagination.type&quot;</span> <span class="attr">style</span>=<span class="string">&quot;width: 200px;&quot;</span></span></span><br><span class="line"><span class="tag">              <span class="attr">class</span>=<span class="string">&quot;filter-item&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">el-input</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">el-input</span> <span class="attr">placeholder</span>=<span class="string">&quot;图书名称&quot;</span> <span class="attr">v-model</span>=<span class="string">&quot;pagination.name&quot;</span> <span class="attr">style</span>=<span class="string">&quot;width: 200px;&quot;</span></span></span><br><span class="line"><span class="tag">              <span class="attr">class</span>=<span class="string">&quot;filter-item&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">el-input</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">el-input</span> <span class="attr">placeholder</span>=<span class="string">&quot;图书描述&quot;</span> <span class="attr">v-model</span>=<span class="string">&quot;pagination.description&quot;</span> <span class="attr">style</span>=<span class="string">&quot;width: 200px;&quot;</span></span></span><br><span class="line"><span class="tag">              <span class="attr">class</span>=<span class="string">&quot;filter-item&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">el-input</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">el-button</span> @<span class="attr">click</span>=<span class="string">&quot;getAll()&quot;</span> <span class="attr">class</span>=<span class="string">&quot;dalfBut&quot;</span>&gt;</span>查询<span class="tag">&lt;/<span class="name">el-button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">el-button</span> <span class="attr">type</span>=<span class="string">&quot;primary&quot;</span> <span class="attr">class</span>=<span class="string">&quot;butT&quot;</span> @<span class="attr">click</span>=<span class="string">&quot;handleCreate()&quot;</span>&gt;</span>新建<span class="tag">&lt;/<span class="name">el-button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>组织数据成为get请求发送的数据</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="title function_">getAll</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="comment">//组织参数，拼接url请求地址</span></span><br><span class="line">    <span class="comment">// console.log(this.pagination.type);</span></span><br><span class="line">    param = <span class="string">&quot;?type=&quot;</span> + <span class="variable language_">this</span>.<span class="property">pagination</span>.<span class="property">type</span>;</span><br><span class="line">    param += <span class="string">&quot;&amp;name=&quot;</span> + <span class="variable language_">this</span>.<span class="property">pagination</span>.<span class="property">name</span>;</span><br><span class="line">    param += <span class="string">&quot;&amp;description=&quot;</span> + <span class="variable language_">this</span>.<span class="property">pagination</span>.<span class="property">description</span>;</span><br><span class="line"></span><br><span class="line">    axios.<span class="title function_">get</span>(<span class="string">&quot;/books/&quot;</span> + <span class="variable language_">this</span>.<span class="property">pagination</span>.<span class="property">currentPage</span> + <span class="string">&quot;/&quot;</span> + <span class="variable language_">this</span>.<span class="property">pagination</span>.<span class="property">pageSize</span> + param).<span class="title function_">then</span>(<span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">pagination</span>.<span class="property">pagesize</span> = res.<span class="property">data</span>.<span class="property">data</span>.<span class="property">size</span>;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">pagination</span>.<span class="property">currentPage</span> = res.<span class="property">data</span>.<span class="property">data</span>.<span class="property">current</span>;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">pagination</span>.<span class="property">total</span> = res.<span class="property">data</span>.<span class="property">data</span>.<span class="property">total</span>;</span><br><span class="line">        <span class="comment">// console.log(res.data);</span></span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">dataList</span> = res.<span class="property">data</span>.<span class="property">data</span>.<span class="property">records</span>;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Controller接受参数</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">   <span class="meta">@GetMapping(&quot;/&#123;currentPage&#125;/&#123;pageSize&#125;&quot;)</span></span><br><span class="line">    <span class="keyword">public</span> R <span class="title function_">getPage</span><span class="params">(<span class="meta">@PathVariable(&quot;currentPage&quot;)</span> <span class="type">int</span> currentPage, <span class="meta">@PathVariable(&quot;pageSize&quot;)</span> <span class="type">int</span> pageSize,Book book)</span> &#123;</span><br><span class="line">        IPage&lt;Book&gt; page = bookService.getPage(currentPage, pageSize,book);</span><br><span class="line"><span class="comment">//        如果当前页码值大于了总页码值，那么重新执行查询操作，使用最大页码值作为当前页码值</span></span><br><span class="line">        <span class="keyword">if</span>(currentPage &gt;page.getPages())&#123;</span><br><span class="line">            page=bookService.getPage((<span class="type">int</span>) page.getPages(), pageSize,book);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">R</span>(<span class="literal">true</span>,page);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p>总结：</p>
+<ol>
+<li><p>pom.xml</p>
+<p>配置起步依赖</p>
+</li>
+<li><p>application.yml</p>
+<p>设置数据源、端口、框架技术相关配置等</p>
+</li>
+<li><p>dao</p>
+<p>继承BaseMapper、设置@Mapper</p>
+</li>
+<li><p>dao测试类</p>
+</li>
+<li><p>service<br>调用数据层接口或Mybatis-Plus提供的接口快速开发</p>
+</li>
+<li><p>service测试类</p>
+</li>
+<li><p>controller<br>基于Restful开发，使用Postman测试跑通功能</p>
+</li>
+<li><p>页面<br>放置在resources目录下的static目录中</p>
+</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>非実在青少年</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>反射</title>
+    <url>/2022/05/02/%E5%8F%8D%E5%B0%84/</url>
+    <content><![CDATA[<h1 id="通过反射获取类的Class对象"><a href="#通过反射获取类的Class对象" class="headerlink" title="通过反射获取类的Class对象"></a>通过反射获取类的Class对象</h1><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Class.forName(<span class="string">&quot;&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
+
+<p>一个类在内存中只有一个Class对象</p>
+<p>一个类被加载后，类的整个结构都会被封装在Class对象中</p>
+<p>只要元素类型与维度一样，就是同一个Class</p>
+<h1 id="通过反射调用普通方法"><a href="#通过反射调用普通方法" class="headerlink" title="通过反射调用普通方法"></a>通过反射调用普通方法</h1><p>通过反射获取一个方法，获取之后用该方法调用invoke方法则可调用方法</p>
+<p>如果该方法为私有，则也可调用setAccessible（关闭安全检测），参数设置为true，</p>
+<p>则可以访问私有方法</p>
+<h1 id="通过反射操作属性"><a href="#通过反射操作属性" class="headerlink" title="通过反射操作属性"></a>通过反射操作属性</h1><p>通过反射获得类的私有属性后，不能直接操作私有属性，但用该属性调用setAccessible（关闭安全检测），参数设置为true，</p>
+<p>则可以修改私有属性</p>
+<p><strong>另外关闭安全检测可以提高一点性能</strong></p>
+]]></content>
+  </entry>
+  <entry>
     <title>Mybatis_learn</title>
     <url>/2022/04/27/Mybatis-learn/</url>
     <content><![CDATA[<h1 id="step"><a href="#step" class="headerlink" title="step"></a>step</h1><p><img src="https://cdn.jsdelivr.net/gh/avaritiachaos/shark-img/Snipaste_2021-09-08_00-00-00.png"></p>
