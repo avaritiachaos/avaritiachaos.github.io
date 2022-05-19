@@ -184,19 +184,19 @@
 <h2 id="Nacos配置管理"><a href="#Nacos配置管理" class="headerlink" title="Nacos配置管理"></a>Nacos配置管理</h2><ol>
 <li><p>在Nacos中添加配置信息</p>
 </li>
-<li><p>在弹出的表单中填写配置信息：<img src="/SpringCloud.assets/Snipaste_2022-05-16_19-45-52.png" alt="Snipaste_2022-05-16_19-45-52"></p>
+<li><p>在弹出的表单中填写配置信息：<img src="https://cdn.jsdelivr.net/gh/avaritiachaos/shark-img/Snipaste_2022-05-16_19-45-52.png" alt="Snipaste_2022-05-16_19-45-52"></p>
 </li>
 </ol>
-<p>配置获取的步骤如下：<img src="/SpringCloud.assets/image-20220516195214524.png" alt="image-20220516195214524"></p>
+<p>配置获取的步骤如下：<img src="https://cdn.jsdelivr.net/gh/avaritiachaos/shark-img/image-20220516195214524.png" alt="image-20220516195214524"></p>
 <h2 id="配置自动刷新"><a href="#配置自动刷新" class="headerlink" title="配置自动刷新"></a>配置自动刷新</h2><p>Nacos中的配置文件变更后，微服务无需重启就可以感知。不过需要通过下面两种配置实现：</p>
 <p>方式一：在@Value注入的变量所在类上添加注解@RefreshScope</p>
-<p><img src="/SpringCloud.assets/image-20220516202638988.png" alt="image-20220516202638988"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/avaritiachaos/shark-img/image-20220516202638988.png" alt="image-20220516202638988"></p>
 <p><strong>方式二：使用@ConfigurationProperties注解（推荐）</strong></p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="meta">@ConfigurationProperties(prefix = &quot;pattern&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">PatternProperties</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> String dateformat;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>补充：@ConfigurationProperties注解在添加prefix属性后，该属性和变量名拼接和配置文件一致，就能完成属性的自动注入</p>
 <p>​			@Component 注册为spring的一个bean</p>
-<h2 id="多服务共享配置"><a href="#多服务共享配置" class="headerlink" title="多服务共享配置"></a>多服务共享配置</h2><p><img src="/SpringCloud.assets/image-20220516210942466.png" alt="image-20220516210942466"></p>
+<h2 id="多服务共享配置"><a href="#多服务共享配置" class="headerlink" title="多服务共享配置"></a>多服务共享配置</h2><p><img src="https://cdn.jsdelivr.net/gh/avaritiachaos/shark-img/image-20220516210942466.png" alt="image-20220516210942466"></p>
 <p>微服务会从nacos读取的配置文件：</p>
 <p>①[服务名]-[spring.profile.active].yaml，环境配置</p>
 <p>②[服务名].yaml，默认配置，多环境共享</p>
@@ -278,6 +278,7 @@
     <url>/2022/05/19/%E7%99%BD%E6%98%BC%E5%A4%A2%E3%81%AE%E9%9D%92%E5%86%99%E7%9C%9F/</url>
     <content><![CDATA[<p>嗯，我也是贾巴沃克。</p>
 <span id="more"></span>
+
 <p><img src="/%E7%99%BD%E6%98%BC%E6%A2%A6.assets/Snipaste_2022-04-20_00-01-38.png" alt="Snipaste_2022-04-20_00-01-38"></p>
 <p><img src="/%E7%99%BD%E6%98%BC%E6%A2%A6.assets/Snipaste_2022-04-20_00-01-55.png" alt="Snipaste_2022-04-20_00-01-55"></p>
 <img src="D:\md\白昼梦.assets\Snipaste_2022-04-21_12-37-21.png" alt="Snipaste_2022-04-21_12-37-21" style="zoom: 67%;" />
@@ -293,6 +294,19 @@
 <p><img src="D:\md\白昼梦.assets\Snipaste_2022-04-21_23-38-26.png" alt="Snipaste_2022-04-21_23-38-26" style="zoom:50%;" /><img src="D:\md\白昼梦.assets\Snipaste_2022-04-21_23-40-14.png" alt="Snipaste_2022-04-21_23-40-14" style="zoom:50%;" /></p>
 <p>还得是背德刺激，虽然是男女主肯定有事是理所当然的事情，但是还是才注意到在推gal时还是会带有肯定会这样的提前预知，要是多点不安就好了</p>
 <p>这个初回h有剧情的啊，虽然好像也听懂7788了，这部分没翻译有点可惜，尽管我感觉女主在看完男主写的东西之后再有动作比较好，都结束啦还有什么必要看那本实质情书的新作呢</p>
+<p><img src="/%E7%99%BD%E6%98%BC%E6%A2%A6.assets/Snipaste_2022-04-22_20-57-11.png" alt="Snipaste_2022-04-22_20-57-11"></p>
+<p><img src="/%E7%99%BD%E6%98%BC%E6%A2%A6.assets/Snipaste_2022-04-22_21-00-09.png" alt="Snipaste_2022-04-22_21-00-09"></p>
+<p><img src="/%E7%99%BD%E6%98%BC%E6%A2%A6.assets/Snipaste_2022-04-22_21-00-04.png" alt="Snipaste_2022-04-22_21-00-04"></p>
+<p><img src="/%E7%99%BD%E6%98%BC%E6%A2%A6.assets/Snipaste_2022-04-22_20-59-36.png" alt="Snipaste_2022-04-22_20-59-36"></p>
+<p><img src="/%E7%99%BD%E6%98%BC%E6%A2%A6.assets/Snipaste_2022-04-22_20-57-32.png" alt="Snipaste_2022-04-22_20-57-32"></p>
+<p>呃呃，这下冠冕堂皇了</p>
+<p><img src="/%E7%99%BD%E6%98%BC%E6%A2%A6.assets/Snipaste_2022-04-22_21-10-31.png" alt="Snipaste_2022-04-22_21-10-31"></p>
+<p>这个镜头居然能出现在黄油里头啊桀桀</p>
+<p><img src="/%E7%99%BD%E6%98%BC%E6%A2%A6.assets/Snipaste_2022-04-22_21-12-27.png" alt="Snipaste_2022-04-22_21-12-27"></p>
+<p><img src="/%E7%99%BD%E6%98%BC%E6%A2%A6.assets/Snipaste_2022-04-22_21-17-07.png" alt="Snipaste_2022-04-22_21-17-07"></p>
+<p>这个时候你开始犯浑了woc，感觉一切都是那么合理，一切都是那么降智，凛你怎么回事呢？</p>
+<p>雷得我外焦里嫩</p>
+<p>——————————————————-Case1 pause—————————————————————————————–</p>
 <p><img src="D:\md\白昼梦.assets\Snipaste_2022-04-21_23-53-41.png" alt="Snipaste_2022-04-21_23-53-41"></p>
 <p>这不该是裤子寄了吗</p>
 <p><img src="/%E7%99%BD%E6%98%BC%E6%A2%A6.assets/Snipaste_2022-04-30_23-19-55.png" alt="Snipaste_2022-04-30_23-19-55"></p>
