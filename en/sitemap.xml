@@ -2,11 +2,29 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>avaritiachaos.github.io/archives/</loc>
-    <lastmod>2019-05-28T00:00:00+00:00</lastmod>
+    <loc>avaritiachaos.github.io/categories/alice-in-wonderland/</loc>
+    <lastmod>2022-04-17T20:27:40+00:00</lastmod>
+  </url><url>
+    <loc>avaritiachaos.github.io/categories/</loc>
+    <lastmod>2022-04-17T20:27:40+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="avaritiachaos.github.io/zh-cn/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ar"
+                href="avaritiachaos.github.io/ar/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="avaritiachaos.github.io/categories/"
+                />
   </url><url>
     <loc>avaritiachaos.github.io/</loc>
-    <lastmod>2020-10-09T00:00:00+00:00</lastmod>
+    <lastmod>2022-04-17T20:27:40+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -22,6 +40,36 @@
                 hreflang="en"
                 href="avaritiachaos.github.io/"
                 />
+  </url><url>
+    <loc>avaritiachaos.github.io/tags/pokemon/</loc>
+    <lastmod>2022-04-17T20:27:40+00:00</lastmod>
+  </url><url>
+    <loc>avaritiachaos.github.io/post/</loc>
+    <lastmod>2022-04-17T20:27:40+00:00</lastmod>
+  </url><url>
+    <loc>avaritiachaos.github.io/tags/</loc>
+    <lastmod>2022-04-17T20:27:40+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="avaritiachaos.github.io/zh-cn/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ar"
+                href="avaritiachaos.github.io/ar/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="avaritiachaos.github.io/tags/"
+                />
+  </url><url>
+    <loc>avaritiachaos.github.io/p/%E3%82%81%E3%81%96%E3%81%9B%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%BC/</loc>
+    <lastmod>2022-04-17T20:27:40+00:00</lastmod>
+  </url><url>
+    <loc>avaritiachaos.github.io/archives/</loc>
+    <lastmod>2019-05-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>avaritiachaos.github.io/page/</loc>
     <lastmod>2020-10-09T00:00:00+00:00</lastmod>
@@ -49,47 +97,9 @@
                 href="avaritiachaos.github.io/about/"
                 />
   </url><url>
-    <loc>avaritiachaos.github.io/categories/alice-in-wonderland/</loc>
-  </url><url>
-    <loc>avaritiachaos.github.io/categories/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="avaritiachaos.github.io/zh-cn/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ar"
-                href="avaritiachaos.github.io/ar/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="avaritiachaos.github.io/categories/"
-                />
-  </url><url>
     <loc>avaritiachaos.github.io/links/</loc>
   </url><url>
-    <loc>avaritiachaos.github.io/post/</loc>
-  </url><url>
     <loc>avaritiachaos.github.io/search/</loc>
-  </url><url>
-    <loc>avaritiachaos.github.io/tags/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="avaritiachaos.github.io/zh-cn/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ar"
-                href="avaritiachaos.github.io/ar/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="avaritiachaos.github.io/tags/"
-                />
   </url><url>
     <loc>avaritiachaos.github.io/categories/test/</loc>
   </url><url>
