@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Categories on Jabberwocky</title>
-        <link>avaritiachaos.github.io/categories/</link>
+        <link>tokisaka.asia/categories/</link>
         <description>Recent content in Categories on Jabberwocky</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
-        <lastBuildDate>Sun, 17 Apr 2022 20:27:40 +0000</lastBuildDate><atom:link href="avaritiachaos.github.io/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 17 Apr 2022 20:27:40 +0000</lastBuildDate><atom:link href="tokisaka.asia/categories/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Alice in Wonderland</title>
-        <link>avaritiachaos.github.io/categories/alice-in-wonderland/</link>
+        <link>tokisaka.asia/categories/alice-in-wonderland/</link>
         <pubDate>Sun, 17 Apr 2022 20:27:40 +0000</pubDate>
         
-        <guid>avaritiachaos.github.io/categories/alice-in-wonderland/</guid>
+        <guid>tokisaka.asia/categories/alice-in-wonderland/</guid>
         <description></description>
         </item>
         <item>
         <title>Test</title>
-        <link>avaritiachaos.github.io/categories/test/</link>
+        <link>tokisaka.asia/categories/test/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>avaritiachaos.github.io/categories/test/</guid>
-        <description>&lt;img src="/avaritiachaos.github.io/categories/test/hutomo-abrianto-l2jk-uxb1BY-unsplash.jpg" alt="Featured image of post Test" /&gt;</description>
+        <guid>tokisaka.asia/categories/test/</guid>
+        <description>&lt;img src="/tokisaka.asia/categories/test/hutomo-abrianto-l2jk-uxb1BY-unsplash.jpg" alt="Featured image of post Test" /&gt;</description>
         </item>
         
     </channel>

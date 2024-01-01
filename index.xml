@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Jabberwocky</title>
-        <link>avaritiachaos.github.io/</link>
+        <link>tokisaka.asia/</link>
         <description>Recent content on Jabberwocky</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
-        <lastBuildDate>Sun, 17 Apr 2022 20:27:40 +0000</lastBuildDate><atom:link href="avaritiachaos.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 17 Apr 2022 20:27:40 +0000</lastBuildDate><atom:link href="tokisaka.asia/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>めざせポケモンマスター！</title>
-        <link>avaritiachaos.github.io/p/%E3%82%81%E3%81%96%E3%81%9B%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%BC/</link>
+        <link>tokisaka.asia/p/%E3%82%81%E3%81%96%E3%81%9B%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%BC/</link>
         <pubDate>Sun, 17 Apr 2022 20:27:40 +0000</pubDate>
         
-        <guid>avaritiachaos.github.io/p/%E3%82%81%E3%81%96%E3%81%9B%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%BC/</guid>
+        <guid>tokisaka.asia/p/%E3%82%81%E3%81%96%E3%81%9B%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%BC/</guid>
         <description>&lt;img src="https://cdn.jsdelivr.net/gh/avaritiachaos/shark-img/amamiya.png" alt="Featured image of post めざせポケモンマスター！" /&gt;&lt;h1 id=&#34;留档一些对局ing&#34;&gt;留档一些对局(ING~)&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -118,18 +118,18 @@
         </item>
         <item>
         <title>Archives</title>
-        <link>avaritiachaos.github.io/archives/</link>
+        <link>tokisaka.asia/archives/</link>
         <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
         
-        <guid>avaritiachaos.github.io/archives/</guid>
+        <guid>tokisaka.asia/archives/</guid>
         <description></description>
         </item>
         <item>
         <title>About</title>
-        <link>avaritiachaos.github.io/about/</link>
+        <link>tokisaka.asia/about/</link>
         <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
         
-        <guid>avaritiachaos.github.io/about/</guid>
+        <guid>tokisaka.asia/about/</guid>
         <description>&lt;p&gt;Written in Go, Hugo is an open source static site generator available under the &lt;a class=&#34;link&#34; href=&#34;https://github.com/gohugoio/hugo/blob/master/LICENSE&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Apache Licence 2.0.&lt;/a&gt; Hugo supports TOML, YAML and JSON data file types, Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.&lt;/p&gt;
 &lt;p&gt;Hugo makes use of a variety of open source projects including:&lt;/p&gt;
@@ -154,10 +154,10 @@
         </item>
         <item>
         <title>Links</title>
-        <link>avaritiachaos.github.io/links/</link>
+        <link>tokisaka.asia/links/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>avaritiachaos.github.io/links/</guid>
+        <guid>tokisaka.asia/links/</guid>
         <description>&lt;p&gt;To use this feature, add &lt;code&gt;links&lt;/code&gt; section to frontmatter.&lt;/p&gt;
 &lt;p&gt;This page&amp;rsquo;s frontmatter:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -189,26 +189,26 @@
         </item>
         <item>
         <title>Search</title>
-        <link>avaritiachaos.github.io/search/</link>
+        <link>tokisaka.asia/search/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>avaritiachaos.github.io/search/</guid>
+        <guid>tokisaka.asia/search/</guid>
         <description></description>
         </item>
         <item>
         <title>Search</title>
-        <link>avaritiachaos.github.io/search/</link>
+        <link>tokisaka.asia/search/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>avaritiachaos.github.io/search/</guid>
+        <guid>tokisaka.asia/search/</guid>
         <description></description>
         </item>
         <item>
         <title>白昼夢の青写真</title>
-        <link>avaritiachaos.github.io/p/%E7%99%BD%E6%98%BC%E5%A4%A2%E3%81%AE%E9%9D%92%E5%86%99%E7%9C%9F/</link>
+        <link>tokisaka.asia/p/%E7%99%BD%E6%98%BC%E5%A4%A2%E3%81%AE%E9%9D%92%E5%86%99%E7%9C%9F/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>avaritiachaos.github.io/p/%E7%99%BD%E6%98%BC%E5%A4%A2%E3%81%AE%E9%9D%92%E5%86%99%E7%9C%9F/</guid>
+        <guid>tokisaka.asia/p/%E7%99%BD%E6%98%BC%E5%A4%A2%E3%81%AE%E9%9D%92%E5%86%99%E7%9C%9F/</guid>
         <description>&lt;img src="https://cdn.jsdelivr.net/gh/avaritiachaos/shark-img/Snipaste_2022-05-06_23-44-56.png" alt="Featured image of post 白昼夢の青写真" /&gt;&lt;p&gt;嗯，我也是贾巴沃克。&lt;/p&gt;
 &lt;!-- more --&gt;
 &lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/avaritiachaos/shark-img/Snipaste_2022-04-20_00-01-38.png&#34;

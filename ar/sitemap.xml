@@ -2,55 +2,55 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>avaritiachaos.github.io/ar/categories/</loc>
+    <loc>tokisaka.asia/ar/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="avaritiachaos.github.io/categories/"
+                href="tokisaka.asia/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="avaritiachaos.github.io/zh-cn/categories/"
+                href="tokisaka.asia/zh-cn/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
-                href="avaritiachaos.github.io/ar/categories/"
+                href="tokisaka.asia/ar/categories/"
                 />
   </url><url>
-    <loc>avaritiachaos.github.io/ar/tags/</loc>
+    <loc>tokisaka.asia/ar/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="avaritiachaos.github.io/tags/"
+                href="tokisaka.asia/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="avaritiachaos.github.io/zh-cn/tags/"
+                href="tokisaka.asia/zh-cn/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
-                href="avaritiachaos.github.io/ar/tags/"
+                href="tokisaka.asia/ar/tags/"
                 />
   </url><url>
-    <loc>avaritiachaos.github.io/ar/</loc>
+    <loc>tokisaka.asia/ar/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="avaritiachaos.github.io/"
+                href="tokisaka.asia/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="avaritiachaos.github.io/zh-cn/"
+                href="tokisaka.asia/zh-cn/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
-                href="avaritiachaos.github.io/ar/"
+                href="tokisaka.asia/ar/"
                 />
   </url>
 </urlset>

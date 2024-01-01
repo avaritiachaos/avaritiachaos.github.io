@@ -2,79 +2,79 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>avaritiachaos.github.io/zh-cn/</loc>
+    <loc>tokisaka.asia/zh-cn/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="avaritiachaos.github.io/"
+                href="tokisaka.asia/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
-                href="avaritiachaos.github.io/ar/"
+                href="tokisaka.asia/ar/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="avaritiachaos.github.io/zh-cn/"
+                href="tokisaka.asia/zh-cn/"
                 />
   </url><url>
-    <loc>avaritiachaos.github.io/zh-cn/categories/</loc>
+    <loc>tokisaka.asia/zh-cn/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="avaritiachaos.github.io/categories/"
+                href="tokisaka.asia/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
-                href="avaritiachaos.github.io/ar/categories/"
+                href="tokisaka.asia/ar/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="avaritiachaos.github.io/zh-cn/categories/"
+                href="tokisaka.asia/zh-cn/categories/"
                 />
   </url><url>
-    <loc>avaritiachaos.github.io/zh-cn/page/</loc>
+    <loc>tokisaka.asia/zh-cn/page/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="avaritiachaos.github.io/page/"
+                href="tokisaka.asia/page/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="avaritiachaos.github.io/zh-cn/page/"
+                href="tokisaka.asia/zh-cn/page/"
                 />
   </url><url>
-    <loc>avaritiachaos.github.io/zh-cn/tags/</loc>
+    <loc>tokisaka.asia/zh-cn/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="avaritiachaos.github.io/tags/"
+                href="tokisaka.asia/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
-                href="avaritiachaos.github.io/ar/tags/"
+                href="tokisaka.asia/ar/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="avaritiachaos.github.io/zh-cn/tags/"
+                href="tokisaka.asia/zh-cn/tags/"
                 />
   </url><url>
-    <loc>avaritiachaos.github.io/zh-cn/%E5%85%B3%E4%BA%8E/</loc>
+    <loc>tokisaka.asia/zh-cn/%E5%85%B3%E4%BA%8E/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="avaritiachaos.github.io/about/"
+                href="tokisaka.asia/about/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="avaritiachaos.github.io/zh-cn/%E5%85%B3%E4%BA%8E/"
+                href="tokisaka.asia/zh-cn/%E5%85%B3%E4%BA%8E/"
                 />
   </url>
 </urlset>
