@@ -2,19 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Tags on Example Site</title>
-        <link>https://example.com/tags/</link>
+        <link>avaritiachaos.github.io/tags/</link>
         <description>Recent content in Tags on Example Site</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
-        <copyright>Example Person</copyright>
-        <lastBuildDate>Sun, 21 Feb 2021 19:17:10 +0000</lastBuildDate><atom:link href="https://example.com/tags/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>素晴らしき日々～</title>
-        <link>https://example.com/tags/%E7%B4%A0%E6%99%B4%E3%82%89%E3%81%97%E3%81%8D%E6%97%A5%E3%80%85/</link>
-        <pubDate>Sun, 21 Feb 2021 19:17:10 +0000</pubDate>
-        
-        <guid>https://example.com/tags/%E7%B4%A0%E6%99%B4%E3%82%89%E3%81%97%E3%81%8D%E6%97%A5%E3%80%85/</guid>
-        <description></description>
-        </item>
-        
+        <copyright>Example Person</copyright><atom:link href="avaritiachaos.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     </channel>
 </rss>

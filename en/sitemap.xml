@@ -2,105 +2,95 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://example.com/categories/alice-in-wonderland/</loc>
-    <lastmod>2021-02-21T19:17:10+00:00</lastmod>
-  </url><url>
-    <loc>https://example.com/categories/</loc>
-    <lastmod>2021-02-21T19:17:10+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://example.com/zh-cn/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ar"
-                href="https://example.com/ar/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://example.com/categories/"
-                />
-  </url><url>
-    <loc>https://example.com/</loc>
-    <lastmod>2021-02-21T19:17:10+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://example.com/zh-cn/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ar"
-                href="https://example.com/ar/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://example.com/"
-                />
-  </url><url>
-    <loc>https://example.com/post/</loc>
-    <lastmod>2021-02-21T19:17:10+00:00</lastmod>
-  </url><url>
-    <loc>https://example.com/tags/</loc>
-    <lastmod>2021-02-21T19:17:10+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://example.com/zh-cn/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ar"
-                href="https://example.com/ar/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://example.com/tags/"
-                />
-  </url><url>
-    <loc>https://example.com/p/%E6%89%80%E4%BB%A5%E5%8D%B3%E4%BD%BF%E6%98%AF%E6%95%99%E4%B8%BB%E6%88%91%E4%B9%9F%E5%BE%88%E5%96%9C%E6%AC%A2/</loc>
-    <lastmod>2021-02-21T19:17:10+00:00</lastmod>
-  </url><url>
-    <loc>https://example.com/tags/%E7%B4%A0%E6%99%B4%E3%82%89%E3%81%97%E3%81%8D%E6%97%A5%E3%80%85/</loc>
-    <lastmod>2021-02-21T19:17:10+00:00</lastmod>
-  </url><url>
-    <loc>https://example.com/archives/</loc>
+    <loc>avaritiachaos.github.io/archives/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/page/</loc>
+    <loc>avaritiachaos.github.io/</loc>
     <lastmod>2020-10-09T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://example.com/zh-cn/page/"
+                href="avaritiachaos.github.io/zh-cn/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ar"
+                href="avaritiachaos.github.io/ar/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://example.com/page/"
+                href="avaritiachaos.github.io/"
                 />
   </url><url>
-    <loc>https://example.com/about/</loc>
+    <loc>avaritiachaos.github.io/page/</loc>
     <lastmod>2020-10-09T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://example.com/zh-cn/%E5%85%B3%E4%BA%8E/"
+                href="avaritiachaos.github.io/zh-cn/page/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://example.com/about/"
+                href="avaritiachaos.github.io/page/"
                 />
   </url><url>
-    <loc>https://example.com/links/</loc>
+    <loc>avaritiachaos.github.io/about/</loc>
+    <lastmod>2020-10-09T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="avaritiachaos.github.io/zh-cn/%E5%85%B3%E4%BA%8E/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="avaritiachaos.github.io/about/"
+                />
   </url><url>
-    <loc>https://example.com/search/</loc>
+    <loc>avaritiachaos.github.io/categories/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="avaritiachaos.github.io/zh-cn/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ar"
+                href="avaritiachaos.github.io/ar/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="avaritiachaos.github.io/categories/"
+                />
   </url><url>
-    <loc>https://example.com/categories/test/</loc>
+    <loc>avaritiachaos.github.io/links/</loc>
+  </url><url>
+    <loc>avaritiachaos.github.io/post/</loc>
+  </url><url>
+    <loc>avaritiachaos.github.io/search/</loc>
+  </url><url>
+    <loc>avaritiachaos.github.io/tags/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="avaritiachaos.github.io/zh-cn/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ar"
+                href="avaritiachaos.github.io/ar/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="avaritiachaos.github.io/tags/"
+                />
+  </url><url>
+    <loc>avaritiachaos.github.io/categories/test/</loc>
+  </url><url>
+    <loc>avaritiachaos.github.io/p/%E7%99%BD%E6%98%BC%E5%A4%A2%E3%81%AE%E9%9D%92%E5%86%99%E7%9C%9F/</loc>
   </url>
 </urlset>
