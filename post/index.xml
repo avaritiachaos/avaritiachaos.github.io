@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Posts on Example Site</title>
+        <title>Posts on Jabberwocky</title>
         <link>avaritiachaos.github.io/post/</link>
-        <description>Recent content in Posts on Example Site</description>
+        <description>Recent content in Posts on Jabberwocky</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>en</language>
-        <copyright>ねえ！ねえ！タク、楽しかった？</copyright><atom:link href="avaritiachaos.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <language>en</language><atom:link href="avaritiachaos.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>白昼夢の青写真</title>
         <link>avaritiachaos.github.io/p/%E7%99%BD%E6%98%BC%E5%A4%A2%E3%81%AE%E9%9D%92%E5%86%99%E7%9C%9F/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

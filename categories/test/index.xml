@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Test on Example Site</title>
+        <title>Test on Jabberwocky</title>
         <link>avaritiachaos.github.io/categories/test/</link>
-        <description>Recent content in Test on Example Site</description>
+        <description>Recent content in Test on Jabberwocky</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>en</language>
-        <copyright>ねえ！ねえ！タク、楽しかった？</copyright><atom:link href="avaritiachaos.github.io/categories/test/index.xml" rel="self" type="application/rss+xml" />
+        <language>en</language><atom:link href="avaritiachaos.github.io/categories/test/index.xml" rel="self" type="application/rss+xml" />
     </channel>
 </rss>

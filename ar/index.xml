@@ -5,7 +5,6 @@
         <link>avaritiachaos.github.io/ar/</link>
         <description>Recent content on موقع تجريبي</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>ar</language>
-        <copyright>ねえ！ねえ！タク、楽しかった？</copyright><atom:link href="avaritiachaos.github.io/ar/index.xml" rel="self" type="application/rss+xml" />
+        <language>ar</language><atom:link href="avaritiachaos.github.io/ar/index.xml" rel="self" type="application/rss+xml" />
     </channel>
 </rss>
