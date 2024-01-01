@@ -5,6 +5,7 @@
         <link>tokisaka.asia/ar/</link>
         <description>Recent content on موقع تجريبي</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>ar</language><atom:link href="tokisaka.asia/ar/index.xml" rel="self" type="application/rss+xml" />
+        <language>ar</language>
+        <copyright>Example Person</copyright><atom:link href="tokisaka.asia/ar/index.xml" rel="self" type="application/rss+xml" />
     </channel>
 </rss>

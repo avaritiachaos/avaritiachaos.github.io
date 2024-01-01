@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Categories on Jabberwocky</title>
+        <title>Categories on Example Site</title>
         <link>tokisaka.asia/categories/</link>
-        <description>Recent content in Categories on Jabberwocky</description>
+        <description>Recent content in Categories on Example Site</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
+        <copyright>Example Person</copyright>
         <lastBuildDate>Sun, 17 Apr 2022 20:27:40 +0000</lastBuildDate><atom:link href="tokisaka.asia/categories/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Alice in Wonderland</title>
         <link>tokisaka.asia/categories/alice-in-wonderland/</link>
