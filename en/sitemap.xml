@@ -2,111 +2,111 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>tokisaka.asia/categories/alice-in-wonderland/</loc>
+    <loc>https://tokisaka.asia/categories/alice-in-wonderland/</loc>
     <lastmod>2022-04-17T20:27:40+00:00</lastmod>
   </url><url>
-    <loc>tokisaka.asia/categories/</loc>
-    <lastmod>2022-04-17T20:27:40+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="tokisaka.asia/zh-cn/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ar"
-                href="tokisaka.asia/ar/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="tokisaka.asia/categories/"
-                />
-  </url><url>
-    <loc>tokisaka.asia/</loc>
+    <loc>https://tokisaka.asia/categories/</loc>
     <lastmod>2022-04-17T20:27:40+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="tokisaka.asia/zh-cn/"
+                href="https://tokisaka.asia/zh-cn/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
-                href="tokisaka.asia/ar/"
+                href="https://tokisaka.asia/ar/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="tokisaka.asia/"
+                href="https://tokisaka.asia/categories/"
                 />
   </url><url>
-    <loc>tokisaka.asia/tags/pokemon/</loc>
-    <lastmod>2022-04-17T20:27:40+00:00</lastmod>
-  </url><url>
-    <loc>tokisaka.asia/post/</loc>
-    <lastmod>2022-04-17T20:27:40+00:00</lastmod>
-  </url><url>
-    <loc>tokisaka.asia/tags/</loc>
+    <loc>https://tokisaka.asia/</loc>
     <lastmod>2022-04-17T20:27:40+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="tokisaka.asia/zh-cn/tags/"
+                href="https://tokisaka.asia/zh-cn/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
-                href="tokisaka.asia/ar/tags/"
+                href="https://tokisaka.asia/ar/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="tokisaka.asia/tags/"
+                href="https://tokisaka.asia/"
                 />
   </url><url>
-    <loc>tokisaka.asia/p/%E3%82%81%E3%81%96%E3%81%9B%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%BC/</loc>
+    <loc>https://tokisaka.asia/tags/pokemon/</loc>
     <lastmod>2022-04-17T20:27:40+00:00</lastmod>
   </url><url>
-    <loc>tokisaka.asia/archives/</loc>
+    <loc>https://tokisaka.asia/post/</loc>
+    <lastmod>2022-04-17T20:27:40+00:00</lastmod>
+  </url><url>
+    <loc>https://tokisaka.asia/tags/</loc>
+    <lastmod>2022-04-17T20:27:40+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://tokisaka.asia/zh-cn/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ar"
+                href="https://tokisaka.asia/ar/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://tokisaka.asia/tags/"
+                />
+  </url><url>
+    <loc>https://tokisaka.asia/p/%E3%82%81%E3%81%96%E3%81%9B%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%BC/</loc>
+    <lastmod>2022-04-17T20:27:40+00:00</lastmod>
+  </url><url>
+    <loc>https://tokisaka.asia/archives/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>tokisaka.asia/page/</loc>
+    <loc>https://tokisaka.asia/page/</loc>
     <lastmod>2020-10-09T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="tokisaka.asia/zh-cn/page/"
+                href="https://tokisaka.asia/zh-cn/page/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="tokisaka.asia/page/"
+                href="https://tokisaka.asia/page/"
                 />
   </url><url>
-    <loc>tokisaka.asia/about/</loc>
+    <loc>https://tokisaka.asia/about/</loc>
     <lastmod>2020-10-09T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="tokisaka.asia/zh-cn/%E5%85%B3%E4%BA%8E/"
+                href="https://tokisaka.asia/zh-cn/%E5%85%B3%E4%BA%8E/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="tokisaka.asia/about/"
+                href="https://tokisaka.asia/about/"
                 />
   </url><url>
-    <loc>tokisaka.asia/links/</loc>
+    <loc>https://tokisaka.asia/links/</loc>
   </url><url>
-    <loc>tokisaka.asia/search/</loc>
+    <loc>https://tokisaka.asia/search/</loc>
   </url><url>
-    <loc>tokisaka.asia/search/</loc>
+    <loc>https://tokisaka.asia/search/</loc>
   </url><url>
-    <loc>tokisaka.asia/categories/test/</loc>
+    <loc>https://tokisaka.asia/categories/test/</loc>
   </url><url>
-    <loc>tokisaka.asia/tags/%E7%99%BD%E6%98%BC%E5%A4%A2/</loc>
+    <loc>https://tokisaka.asia/tags/%E7%99%BD%E6%98%BC%E5%A4%A2/</loc>
   </url><url>
-    <loc>tokisaka.asia/p/%E7%99%BD%E6%98%BC%E5%A4%A2%E3%81%AE%E9%9D%92%E5%86%99%E7%9C%9F/</loc>
+    <loc>https://tokisaka.asia/p/%E7%99%BD%E6%98%BC%E5%A4%A2%E3%81%AE%E9%9D%92%E5%86%99%E7%9C%9F/</loc>
   </url>
 </urlset>

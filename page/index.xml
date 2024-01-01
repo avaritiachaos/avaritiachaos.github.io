@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Pages on Jabberwocky</title>
-        <link>tokisaka.asia/page/</link>
+        <link>https://tokisaka.asia/page/</link>
         <description>Recent content in Pages on Jabberwocky</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>Example Person</copyright>
-        <lastBuildDate>Tue, 28 May 2019 00:00:00 +0000</lastBuildDate><atom:link href="tokisaka.asia/page/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 28 May 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://tokisaka.asia/page/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Archives</title>
-        <link>tokisaka.asia/archives/</link>
+        <link>https://tokisaka.asia/archives/</link>
         <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
         
-        <guid>tokisaka.asia/archives/</guid>
+        <guid>https://tokisaka.asia/archives/</guid>
         <description></description>
         </item>
         <item>
         <title>About</title>
-        <link>tokisaka.asia/about/</link>
+        <link>https://tokisaka.asia/about/</link>
         <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
         
-        <guid>tokisaka.asia/about/</guid>
+        <guid>https://tokisaka.asia/about/</guid>
         <description>&lt;p&gt;Written in Go, Hugo is an open source static site generator available under the &lt;a class=&#34;link&#34; href=&#34;https://github.com/gohugoio/hugo/blob/master/LICENSE&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Apache Licence 2.0.&lt;/a&gt; Hugo supports TOML, YAML and JSON data file types, Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.&lt;/p&gt;
 &lt;p&gt;Hugo makes use of a variety of open source projects including:&lt;/p&gt;
@@ -45,10 +45,10 @@
         </item>
         <item>
         <title>Links</title>
-        <link>tokisaka.asia/links/</link>
+        <link>https://tokisaka.asia/links/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>tokisaka.asia/links/</guid>
+        <guid>https://tokisaka.asia/links/</guid>
         <description>&lt;p&gt;To use this feature, add &lt;code&gt;links&lt;/code&gt; section to frontmatter.&lt;/p&gt;
 &lt;p&gt;This page&amp;rsquo;s frontmatter:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -80,10 +80,10 @@
         </item>
         <item>
         <title>Search</title>
-        <link>tokisaka.asia/search/</link>
+        <link>https://tokisaka.asia/search/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>tokisaka.asia/search/</guid>
+        <guid>https://tokisaka.asia/search/</guid>
         <description></description>
         </item>
         
