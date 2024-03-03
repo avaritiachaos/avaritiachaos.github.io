@@ -20,7 +20,7 @@
 &lt;!-- more --&gt;
 &lt;p&gt;如图标题所示，vs在安装live server之后，创建了html文件之后不能打开
 Open a folder or workspace… (File -&amp;gt; Open Folder)
-我的解决方案是如下
+解决方案是如下
 （注意在此之前已正确安装live server,及修改默认浏览器）
 首先关闭vs开发工具再打开
 然后 点击file →Open Folder 注意是Folder不是File&lt;/p&gt;

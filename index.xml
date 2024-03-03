@@ -20,7 +20,7 @@
 &lt;!-- more --&gt;
 &lt;p&gt;如图标题所示，vs在安装live server之后，创建了html文件之后不能打开
 Open a folder or workspace… (File -&amp;gt; Open Folder)
-我的解决方案是如下
+解决方案是如下
 （注意在此之前已正确安装live server,及修改默认浏览器）
 首先关闭vs开发工具再打开
 然后 点击file →Open Folder 注意是Folder不是File&lt;/p&gt;
@@ -158,7 +158,7 @@ Open a folder or workspace… (File -&amp;gt; Open Folder)
         <pubDate>Fri, 16 Apr 2021 20:51:50 +0000</pubDate>
         
         <guid>https://tokisaka.asia/p/%E4%B8%8D%E8%AE%A4%E8%AF%86/</guid>
-        <description>&lt;img src="https://cdn.jsdelivr.net/gh/avaritiachaos/shark-img/sakura1.png" alt="Featured image of post 不认识" /&gt;&lt;p&gt;【樱子】老师，你认识草薙健一郎吗？&lt;/p&gt;
+        <description>&lt;img src="https://cdn.jsdelivr.net/gh/avaritiachaos/shark-img/Snipaste_2020-08-25_20-14-04.png" alt="Featured image of post 不认识" /&gt;&lt;p&gt;【樱子】老师，你认识草薙健一郎吗？&lt;/p&gt;
 &lt;p&gt;【直哉】也就在电视上见过而已。&lt;/p&gt;
 &lt;p&gt;【樱子】那御樱禀好像和你是同年段的呀？&lt;/p&gt;
 &lt;p&gt;【直哉】同年段的人我怎么可能都认识。&lt;/p&gt;
@@ -171,21 +171,23 @@ Open a folder or workspace… (File -&amp;gt; Open Folder)
         <pubDate>Sun, 21 Feb 2021 19:17:10 +0000</pubDate>
         
         <guid>https://tokisaka.asia/p/%E6%89%80%E4%BB%A5%E5%8D%B3%E4%BD%BF%E6%98%AF%E6%95%99%E4%B8%BB%E6%88%91%E4%B9%9F%E5%BE%88%E5%96%9C%E6%AC%A2/</guid>
-        <description>&lt;p&gt;知道了又如何？
-反正，
-那种事，就算知道又能咋样……&lt;/p&gt;
+        <description>&lt;p&gt;知道了又如何？&lt;/p&gt;
+&lt;p&gt;反正，&lt;/p&gt;
+&lt;p&gt;那种事，就算知道又能咋样……&lt;/p&gt;
 &lt;!-- more --&gt;
-&lt;p&gt;假如说，我把那搞清楚了，又能做些什么呢……
-连自己都自身难保呢……还管的了别人的事情……
-我连自己的命运都无法改变……
-又谈何去拯救他人……
-我能做的，就只有……
-下次，要是她来这秘密基地的话……对她稍微好点吧……
-把推荐的动画……推荐的漫画啥的……都给她看看……
-我无法拯救她……
-但说不定，我能缓解她的痛苦……就像我用漫画动画……还有其它空想的产物……为自己麻醉一样……
-是啊……她不是敌人……她不是敌人……所以，下回对她更温柔些吧……&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/avaritiachaos/shark-img/day1.png&#34;
+&lt;p&gt;假如说，我把那搞清楚了，又能做些什么呢……&lt;/p&gt;
+&lt;p&gt;连自己都自身难保呢……还管的了别人的事情……&lt;/p&gt;
+&lt;p&gt;我连自己的命运都无法改变……&lt;/p&gt;
+&lt;p&gt;又谈何去拯救他人……&lt;/p&gt;
+&lt;p&gt;我能做的，就只有……&lt;/p&gt;
+&lt;p&gt;下次，要是她来这秘密基地的话……对她稍微好点吧……&lt;/p&gt;
+&lt;p&gt;把推荐的动画……推荐的漫画啥的……都给她看看……&lt;/p&gt;
+&lt;p&gt;我无法拯救她……&lt;/p&gt;
+&lt;p&gt;但说不定，我能缓解她的痛苦……就像我用漫画动画……还有其它空想的产物……为自己麻醉一样……&lt;/p&gt;
+&lt;p&gt;是啊……她不是敌人……她不是敌人……所以，下回对她更温柔些吧……&lt;/p&gt;
+&lt;p&gt;![image-20220519193205730](&lt;a class=&#34;link&#34; href=&#34;https://cdn.jsdelivr.net/gh/avaritiachaos/shark-img/psc&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://cdn.jsdelivr.net/gh/avaritiachaos/shark-img/psc&lt;/a&gt; (4).png)
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/avaritiachaos/shark-img/day4.png&#34;
 	
 	
 	
@@ -205,17 +207,7 @@ Open a folder or workspace… (File -&amp;gt; Open Folder)
 	
 	
 &gt;
-&lt;img src=&#34;https://cdn.jsdelivr.net/gh/avaritiachaos/shark-img/day3.png&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;image-20220519193205730&#34;
-	
-	
-&gt;
-&lt;img src=&#34;https://cdn.jsdelivr.net/gh/avaritiachaos/shark-img/day4.png&#34;
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/avaritiachaos/shark-img/day1.png&#34;
 	
 	
 	
@@ -699,19 +691,37 @@ Open a folder or workspace… (File -&amp;gt; Open Folder)
 </description>
         </item>
         <item>
+        <title>柘榴序章</title>
+        <link>https://tokisaka.asia/p/%E6%9F%98%E6%A6%B4%E5%BA%8F%E7%AB%A0/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://tokisaka.asia/p/%E6%9F%98%E6%A6%B4%E5%BA%8F%E7%AB%A0/</guid>
+        <description>&lt;img src="https://cdn.jsdelivr.net/gh/avaritiachaos/shark-img/psc (3).png" alt="Featured image of post 柘榴序章" /&gt;&lt;p&gt;非常感谢，给予我生命的是你，我一直爱着你，&lt;/p&gt;
+&lt;p&gt;虽然给您添了很多麻烦，我还是非常感谢能和您在这个世界再次相遇，&lt;/p&gt;
+&lt;p&gt;在只能一个人前行的路上，还赐予了我这段美好的时间，&lt;/p&gt;
+&lt;p&gt;在被你称作幻想世界的这个世界中的生活，&lt;/p&gt;
+&lt;p&gt;对我来说是至高无上的美好回忆，这个梦之世界，&lt;/p&gt;
+&lt;p&gt;才是我人生中最重要的记忆，虽然记忆只是有如布景道具上的景色，&lt;/p&gt;
+&lt;p&gt;梦之世界亦不完美，但是，在这里跟您一起经历的分分秒秒，毫无疑问，都是，美好的每一天。&lt;/p&gt;
+&lt;p&gt;![](%E6%9F%98%E6%A6%B4%E5%BA%8F%E7%AB%A0.assets/psc (6).png)&lt;/p&gt;
+&lt;p&gt;![](%E6%9F%98%E6%A6%B4%E5%BA%8F%E7%AB%A0.assets/psc (5).png)&lt;/p&gt;
+&lt;p&gt;![](%E6%9F%98%E6%A6%B4%E5%BA%8F%E7%AB%A0.assets/psc (7).png)&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>永遠の魔法使い</title>
         <link>https://tokisaka.asia/p/%E6%B0%B8%E9%81%A0%E3%81%AE%E9%AD%94%E6%B3%95%E4%BD%BF%E3%81%84/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>https://tokisaka.asia/p/%E6%B0%B8%E9%81%A0%E3%81%AE%E9%AD%94%E6%B3%95%E4%BD%BF%E3%81%84/</guid>
-        <description>&lt;p&gt;八方美人で 調子いいこと言って
-八面玲珑地说着得意忘形的话​
-理想話る 瞳はまっすぐ
-高谈理想的眼神 是如此率真
-その気にさせるのは 上手いのに
-明明擅长让别人产生期待&lt;/p&gt;
-&lt;p&gt;実現できないね 結局
-结果最后 没有一个是实现的呢&lt;/p&gt;
+        <description>&lt;p&gt;八方美人で 調子いいこと言って&lt;/p&gt;
+&lt;p&gt;八面玲珑地说着得意忘形的话​&lt;/p&gt;
+&lt;p&gt;理想話る 瞳はまっすぐ&lt;/p&gt;
+&lt;p&gt;高谈理想的眼神 是如此率真&lt;/p&gt;
+&lt;p&gt;その気にさせるのは 上手いのに&lt;/p&gt;
+&lt;p&gt;明明擅长让别人产生期待&lt;/p&gt;
+&lt;p&gt;実現できないね 結局&lt;/p&gt;
+&lt;p&gt;结果最后 没有一个是实现的呢&lt;/p&gt;
 </description>
         </item>
         <item>
