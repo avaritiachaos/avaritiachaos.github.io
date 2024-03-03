@@ -20,6 +20,9 @@
                 href="https://tokisaka.asia/"
                 />
   </url><url>
+    <loc>https://tokisaka.asia/tags/knowledge/</loc>
+    <lastmod>2023-04-08T18:03:55+00:00</lastmod>
+  </url><url>
     <loc>https://tokisaka.asia/post/</loc>
     <lastmod>2023-04-08T18:03:55+00:00</lastmod>
   </url><url>
@@ -40,9 +43,6 @@
                 hreflang="en"
                 href="https://tokisaka.asia/tags/"
                 />
-  </url><url>
-    <loc>https://tokisaka.asia/tags/ttt/</loc>
-    <lastmod>2023-04-08T18:03:55+00:00</lastmod>
   </url><url>
     <loc>https://tokisaka.asia/p/vs-codelive-server%E6%8F%92%E4%BB%B6/</loc>
     <lastmod>2023-04-08T18:03:55+00:00</lastmod>
@@ -66,9 +66,6 @@
                 />
   </url><url>
     <loc>https://tokisaka.asia/p/java%E6%8D%A2jdk%E7%89%88%E6%9C%AC%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE%E5%90%8E%E4%B8%8D%E7%94%9F%E6%95%88%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</loc>
-    <lastmod>2022-05-07T11:33:21+00:00</lastmod>
-  </url><url>
-    <loc>https://tokisaka.asia/tags/knowledge/</loc>
     <lastmod>2022-05-07T11:33:21+00:00</lastmod>
   </url><url>
     <loc>https://tokisaka.asia/categories/%E9%9D%9E%E5%AE%9F%E5%9C%A8%E9%9D%92%E5%B0%91%E5%B9%B4/</loc>
