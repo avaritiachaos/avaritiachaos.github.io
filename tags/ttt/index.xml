@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>ttt on Jabberwocky</title>
+        <link>https://tokisaka.asia/tags/ttt/</link>
+        <description>Recent content in ttt on Jabberwocky</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <copyright>Example Person</copyright>
+        <lastBuildDate>Sat, 08 Apr 2023 18:03:55 +0000</lastBuildDate><atom:link href="https://tokisaka.asia/tags/ttt/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>VS Code——Live Server插件</title>
+        <link>https://tokisaka.asia/p/vs-codelive-server%E6%8F%92%E4%BB%B6/</link>
+        <pubDate>Sat, 08 Apr 2023 18:03:55 +0000</pubDate>
+        
+        <guid>https://tokisaka.asia/p/vs-codelive-server%E6%8F%92%E4%BB%B6/</guid>
+        <description>&lt;blockquote&gt;
+&lt;p&gt;Live Server：一个具有实时加载功能的小型服务器，可以使用它来html/css/javascript，但是不能用于部署最终站点。也就是说我们可以在项目中实时用live-server作为一个实时服务器实时查看开发的网页或项目效果&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;vs-使用live-server-时提示open-a-folder-or-workspace-file---open-folder&#34;&gt;vs 使用live server 时提示Open a folder or workspace&amp;hellip; (File -&amp;gt; Open Folder)&lt;/h1&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;如图标题所示，vs在安装live server之后，创建了html文件之后不能打开
+Open a folder or workspace… (File -&amp;gt; Open Folder)
+我的解决方案是如下
+（注意在此之前已正确安装live server,及修改默认浏览器）
+首先关闭vs开发工具再打开
+然后 点击file →Open Folder 注意是Folder不是File&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/avaritiachaos/shark-img/image-20230408181443345.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20230408181443345&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h1 id=&#34;vscode配置live-server不生效&#34;&gt;vscode配置live server不生效&lt;/h1&gt;
+&lt;p&gt;弹出提示 Live Reload is not possible without a head or body tag.&lt;/p&gt;
+&lt;p&gt;说明代码里没有body标签。添加完&lt;body&gt;&lt;/body&gt; 保存&lt;/p&gt;
+&lt;p&gt;重新运行open with live server就好了。&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

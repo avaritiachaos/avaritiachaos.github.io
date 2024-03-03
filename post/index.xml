@@ -7,7 +7,49 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>Example Person</copyright>
-        <lastBuildDate>Sun, 17 Apr 2022 20:27:40 +0000</lastBuildDate><atom:link href="https://tokisaka.asia/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 08 Apr 2023 18:03:55 +0000</lastBuildDate><atom:link href="https://tokisaka.asia/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>VS Code——Live Server插件</title>
+        <link>https://tokisaka.asia/p/vs-codelive-server%E6%8F%92%E4%BB%B6/</link>
+        <pubDate>Sat, 08 Apr 2023 18:03:55 +0000</pubDate>
+        
+        <guid>https://tokisaka.asia/p/vs-codelive-server%E6%8F%92%E4%BB%B6/</guid>
+        <description>&lt;blockquote&gt;
+&lt;p&gt;Live Server：一个具有实时加载功能的小型服务器，可以使用它来html/css/javascript，但是不能用于部署最终站点。也就是说我们可以在项目中实时用live-server作为一个实时服务器实时查看开发的网页或项目效果&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;vs-使用live-server-时提示open-a-folder-or-workspace-file---open-folder&#34;&gt;vs 使用live server 时提示Open a folder or workspace&amp;hellip; (File -&amp;gt; Open Folder)&lt;/h1&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;如图标题所示，vs在安装live server之后，创建了html文件之后不能打开
+Open a folder or workspace… (File -&amp;gt; Open Folder)
+我的解决方案是如下
+（注意在此之前已正确安装live server,及修改默认浏览器）
+首先关闭vs开发工具再打开
+然后 点击file →Open Folder 注意是Folder不是File&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/avaritiachaos/shark-img/image-20230408181443345.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20230408181443345&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h1 id=&#34;vscode配置live-server不生效&#34;&gt;vscode配置live server不生效&lt;/h1&gt;
+&lt;p&gt;弹出提示 Live Reload is not possible without a head or body tag.&lt;/p&gt;
+&lt;p&gt;说明代码里没有body标签。添加完&lt;body&gt;&lt;/body&gt; 保存&lt;/p&gt;
+&lt;p&gt;重新运行open with live server就好了。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>java换jdk版本环境变量配置后不生效解决方法</title>
+        <link>https://tokisaka.asia/p/java%E6%8D%A2jdk%E7%89%88%E6%9C%AC%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE%E5%90%8E%E4%B8%8D%E7%94%9F%E6%95%88%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</link>
+        <pubDate>Sat, 07 May 2022 11:33:21 +0000</pubDate>
+        
+        <guid>https://tokisaka.asia/p/java%E6%8D%A2jdk%E7%89%88%E6%9C%AC%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE%E5%90%8E%E4%B8%8D%E7%94%9F%E6%95%88%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</guid>
+        <description>&lt;p&gt;把系统变量中path的C:\Program Files (x86)\Common Files\Oracle\Java\javapath删除即可&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>めざせポケモンマスター！</title>
         <link>https://tokisaka.asia/p/%E3%82%81%E3%81%96%E3%81%9B%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%BC/</link>
         <pubDate>Sun, 17 Apr 2022 20:27:40 +0000</pubDate>
@@ -121,6 +163,468 @@
 &lt;p&gt;【樱子】那御樱禀好像和你是同年段的呀？&lt;/p&gt;
 &lt;p&gt;【直哉】同年段的人我怎么可能都认识。&lt;/p&gt;
 &lt;p&gt;——《樱之诗~在樱花之森上飞舞~》&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>所以即使是教主，我也很喜欢</title>
+        <link>https://tokisaka.asia/p/%E6%89%80%E4%BB%A5%E5%8D%B3%E4%BD%BF%E6%98%AF%E6%95%99%E4%B8%BB%E6%88%91%E4%B9%9F%E5%BE%88%E5%96%9C%E6%AC%A2/</link>
+        <pubDate>Sun, 21 Feb 2021 19:17:10 +0000</pubDate>
+        
+        <guid>https://tokisaka.asia/p/%E6%89%80%E4%BB%A5%E5%8D%B3%E4%BD%BF%E6%98%AF%E6%95%99%E4%B8%BB%E6%88%91%E4%B9%9F%E5%BE%88%E5%96%9C%E6%AC%A2/</guid>
+        <description>&lt;p&gt;知道了又如何？
+反正，
+那种事，就算知道又能咋样……&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;假如说，我把那搞清楚了，又能做些什么呢……
+连自己都自身难保呢……还管的了别人的事情……
+我连自己的命运都无法改变……
+又谈何去拯救他人……
+我能做的，就只有……
+下次，要是她来这秘密基地的话……对她稍微好点吧……
+把推荐的动画……推荐的漫画啥的……都给她看看……
+我无法拯救她……
+但说不定，我能缓解她的痛苦……就像我用漫画动画……还有其它空想的产物……为自己麻醉一样……
+是啊……她不是敌人……她不是敌人……所以，下回对她更温柔些吧……&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/avaritiachaos/shark-img/day1.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20220519193205730&#34;
+	
+	
+&gt;
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/avaritiachaos/shark-img/day2.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20220519193205730&#34;
+	
+	
+&gt;
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/avaritiachaos/shark-img/day3.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20220519193205730&#34;
+	
+	
+&gt;
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/avaritiachaos/shark-img/day4.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20220519193205730&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;（虽然配图甚至不是教主人格，乐）&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>干了这杯22016年的艾岚茶</title>
+        <link>https://tokisaka.asia/p/%E5%B9%B2%E4%BA%86%E8%BF%99%E6%9D%AF22016%E5%B9%B4%E7%9A%84%E8%89%BE%E5%B2%9A%E8%8C%B6/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://tokisaka.asia/p/%E5%B9%B2%E4%BA%86%E8%BF%99%E6%9D%AF22016%E5%B9%B4%E7%9A%84%E8%89%BE%E5%B2%9A%E8%8C%B6/</guid>
+        <description>&lt;p&gt;连着几天，把先前鸽着的岛给推完了，实在是有毒&amp;hellip;
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/avaritiachaos/shark-img/rinne.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;最早听说island还是高中时你岛动画化了，被罚抄混乱无比的改编敲晕过我当然是选择不去看，但是loop系一直是我的最爱，穿越时空，跨越无数世界线拯救喜欢的人，即使你忘记了，我也不会忘记，我觉得非常浪漫&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;待在Lab里无所事事的时间，果汁入口的时候，走在街上的一瞬，在某时某刻与某人接吻的时候，就算不是时常也好，就算一百次中只有一次也好，希望你能够想起我，因为我就身在那里，在1%这个屏障的另一面，我也一定依然存在。
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/avaritiachaos/shark-img/psc_6.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;​         回到你岛，最开始我是不太感冒的，空中幼彩的画实在是太幼了，我上来就是冲着油咖喱配音的凛音来的。想进凛音线却发现有剧情锁进了沙罗线，也行吧，还吃了一套纱罗刀法，走了好几个be了对我来说是真的少见，到后来的“我生我自己”逐渐被剧情吸引。然后赶紧接着把夏莲线推完了，夏莲这个角色我是很喜欢的，吃柠檬糖那段也甜得一比////话说你岛真是满是荤段子，多亏我听得懂。。。
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/avaritiachaos/shark-img/psc_7.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/avaritiachaos/shark-img/psc_10.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/avaritiachaos/shark-img/psc_8.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;虽然几秒后就吃了一口玻璃渣子，夏莲有婚约者，夏莲的婚约者是那个人妻控巡警，在海边一起坐着的是她哥哥，还是个基佬，到这我发现真是全世界都在给你助攻了。。放现实我直接点了，不过正是因为是故事所以我才喜欢。最后墓碑出现以为还是be收尾了，听到女声时期待墓碑只是恶作剧，，可恶，最后了还来刀子的，但是可喜可贺的happy end收尾了，he赛高！
+补贴一张夏莲夕阳背光杀我，wsl
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/avaritiachaos/shark-img/psc_9.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;图片&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;-&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;
+到此就可以正式进入凛音线了，前面一切正常，有前两条线的角色铺垫，凛音感情线看起来相当自然。发糖也是最致命的&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/avaritiachaos/shark-img/psc_11.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/avaritiachaos/shark-img/psc_12.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/avaritiachaos/shark-img/psc_13.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/avaritiachaos/shark-img/psc_14.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;
+哇，酸了酸了，一亿两千万点，熟悉的酸男主，但是果然还是很喜欢凛音。
+终于到了必然会出事的暴风雨之夜，凛音以为男主把真切那给杀了直接爆炸，不得不说不愧是田村大魔王，这段声优的演绎实在是太棒了，当时着实被吓了一跳。
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/avaritiachaos/shark-img/psc_15.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/avaritiachaos/shark-img/psc_16.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;
+再到暴龙岛上，和凛音斗智斗勇，甚至和假想的过去未来的自己斗智斗勇，终于还是玩不过她，一手装死无敌演技直接吓呆男主，
+其实到这里的时候根据我有且只有一个切那的推论，凛音也只有一个，果然。
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/avaritiachaos/shark-img/psc_17.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;
+凛音让切那受不住了，但当时我的想法是：  快！给我选项，让我上号代打！我能操作？！我·他妈··开心·死了！这不就是谁都没死的情况了吗，快，让我操作！我喜欢的就是未来海滩上遇到的凛音啊！一直都是啊，直接来一手无敌攻略！
+结果凛音出完气后直接原谅了单曲君（男主）
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/avaritiachaos/shark-img/psc_18.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;原以为是时间回溯回到了5年前，结果一直都是在原来的时间，毛骨悚然，从这里开始就有伏笔了。
+之后两个人作大死又乘那破小船回island，然后必然的，男主游不动了，想减轻重量撒抱回来的骨头人的骨灰也没用，跟传说一样，凛音跳海，个把月后捞上来了爬满苍蝇的凛音尸骸。夏篇即将完结。
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/avaritiachaos/shark-img/psc_19.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;
+（以前无意中看过这张cg，话说谁当年能想到这是在撒骨灰。。）
+之后桃香带来冷冻睡眠装置的情报，打算让男主沉睡到未来时间机器发明后再穿越回来拯救凛音。ok，我去，天知道谁设置的时间，切那老兄一觉他妈直接睡到了两万年后，遇见rinne，冬篇开启。
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/avaritiachaos/shark-img/psc_20.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/avaritiachaos/shark-img/psc_21.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;
+冬篇的环境其实我是很喜欢的，末世废土，恰好这几天又冷，直接氛围拉满。最开始的时候我很着急，这男主把夏篇的事情忘得就剩个毛了，我还在急着让他穿回去救凛音呢，他倒好，在这开始祸害别人了。但是随着剧情逐渐深入，一天天过去，我慢慢地越来越喜欢这个末世里的坚强又乐观的女孩子了，就像切那的独白，我不喜欢世界，如果有一个按下后会世界末日的按钮，我就会按下去，但是即使是这样的我，看到在末世中还是一样美好的rinne的时候，也还是想要带她去过去的island，去那个夏日，海滩，和星空，让她听见真正的海的声音，能吃饱肚子，吃到真正的刨冰，不用再盖发霉的毛毯，知道在遥远的未来有这样一个女孩子的话，只有我一人回到过去的话，真的心疼。。然后这个冬篇越推越不舍。
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/avaritiachaos/shark-img/psc_22.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/avaritiachaos/shark-img/psc_23.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/avaritiachaos/shark-img/psc_24.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;
+「差不多喜欢上了吗?」
+「什么?」
+「我。」
+「笨蛋，早就喜欢上了」（才不是切那说的什么并没有之类的垃圾话！)///&lt;/p&gt;
+&lt;p&gt;牺牲了一堆人，连涅槃老爷子都倒在了雪原，时间机器终于完成，离别的时候到了
+男主劝说rinne跟在他后面一起前往过去，rinne拒绝了，这段真的有被虐到，此时的我越来越坚信rinne就是夏篇凛音的转世，没想到啊没想到，这个陷阱充满了编剧的恶意。
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/avaritiachaos/shark-img/psc_25.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/avaritiachaos/shark-img/psc_26.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/avaritiachaos/shark-img/psc_27.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;
+来到真夏篇，我以为是时间回到了最初见面的时候，此时的切那保留了冬篇和夏篇全部的记忆，这次没有走上跳海的老路，凛音和切那再次相恋，切那把经历写成书，送个凛音，准备向凛音求婚。
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/avaritiachaos/shark-img/psc_28.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/avaritiachaos/shark-img/psc_29.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/avaritiachaos/shark-img/psc_31.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;
+在海边回答了三个问题后，我回档试了几次，发现不管选什么收束的话都一样，以为没什么大影响，就没特意都选正确答案（天地良心其实我都知道正确答案），过了几天跪在沙滩上向玖音表达要娶凛音，当时还特意给了个选项，觉得编剧还挺懂的
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/avaritiachaos/shark-img/psc_32.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/avaritiachaos/shark-img/psc_33.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/avaritiachaos/shark-img/psc_30.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;
+玖音感动极了，希望凛音切那永远幸福，于是他俩不久后就结婚了，可喜可贺可喜可贺。至此，island的故事我觉得很棒。
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/avaritiachaos/shark-img/psc_35.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;
+故事到这为止我以为结束了，检查一下cg，诶，怎么少了三张cg，莫非是有be没有回收，查一下攻略，好家伙，原来把之前的三个问题都答对，还有个re真结局，上面那个只是个凛音线的good end，和凛音结婚的结局已经很赞了，你true end莫非更厉害？怀着期待，我回档到把三个问题答对，然后和玖音说明，果然出现了新选项“一定会让Rinne幸福”，当时我想，哇，莫非有办法让凛音想起rinne时期的记忆？选！
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/avaritiachaos/shark-img/psc_34.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;
+结果玖音全篇第一次情绪爆炸了，留下一脸懵逼的我
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/avaritiachaos/shark-img/psc_36.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;
+某天凛音中暑后，伽罗万里爱检查了凛音的DNA，再把煤纹病的伴性遗传解释一通，得出凛音不是御原典正的亲生的结论，但是是玖音亲生的，本来按照凛音线的夏篇提示，玖音只是扮演原来死去的玖音而已，只是把凛音当作女儿看待，到这我还是没明白特别交代这个有什么意义。之后切那又陪着桃香去科研，发现了和rinne工作室一毛一样的山洞
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/avaritiachaos/shark-img/psc_39.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/avaritiachaos/shark-img/psc_37.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;
+男主顿时蒙了，我他妈也傻了，经过桃香专业的解释，这是两万年前的遗迹。wtf？就是说rinne其实并没有发明真正的时间机器，男主用的那个仍然是睡眠冷冻装置，他又睡了两万年，刚好形成了现在这个真夏篇的宇宙，和原来的夏篇长得一样，太扯了吧gogo编剧，原以为的时间轮回最后居然是直线型时间轴，那个夏天的凛音，不知道多少个夏天的凛音，都跳海而亡，顺带解释了一下岛上传说的由来，我他妈谢谢你啊！结果最后并没有救到那个夏天的凛音，我顿时就不好了，好，接着看，然后男主切那就自顾自的独白起来，说什么不能回到过去，要展望未来，结合玖音的身世，然后一通很合理的分析之后，发现玖音就是两万年前冰河期的Rinne，她再男主冻结后也坐上了那个装置，但是比男主先醒来20年，啊啊啊啊啊啊，震惊我一年！那凛音呢，她是什么情况？我他妈救了谁？前往玖音的房间，不愿承认的玖音终于还是承认了自己就是rinne，切那说要帮她继续实现梦想，？？还要干啥子啊大兄弟&lt;img src=&#34;https://cdn.jsdelivr.net/gh/avaritiachaos/shark-img/psc_38.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/avaritiachaos/shark-img/psc_40.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;
+我只想说：
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/avaritiachaos/shark-img/psc.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;
+之后男主就又他妈坐上冷冻装置沉睡去了。对于这个re真结局提供的信息，我真的是一万只草泥马狂奔而过，我简直想不通他都知道这是个直线型时间轴根本没有时间回溯他还想去搞什么花的继续祸害人家。然后这个结局的伦理也让人匪夷所思，凛音是切那两万年前对着rinne一发入魂的女儿，wtf？就算末世世界观13岁可以结婚但是当时rinne才13岁啊禽兽！写的什么几把东西。rinne带有记忆明知男主和凛音是父女关系还撮合他俩的事实也是令人窒息，这什么破鬼父展开。这个真结局是真的搞，我的确喜欢那个末世里的rinne，那之前夏天跳海的凛音呢？全给你讲故事去了。。。4万年前我亲吻的凛音不会是女儿吧，mdzz，这直线型时间线就是个睿智设定。
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/avaritiachaos/shark-img/psc_41.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;
+带rinne回夏天，吃刨冰，在沙滩上散步，保护她爱护她，这些是我在末世最想要做的事情，但是当她以玖音的身份与切那重逢时，我却感到了作者的恶意，我喜欢的是谁？一直是凛音，是rinne，结果她们不是同一个人？还他妈是母女关系，那我喜欢的是谁？一直想要拯救的是谁？我冰冻沉睡穿越时空又是为了作甚？服了，最后还接着穿越，浪漫个锤子噢。我是岛黑！！！!&lt;img src=&#34;https://cdn.jsdelivr.net/gh/avaritiachaos/shark-img/psc_42.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;
+同样是有女儿的夏日口袋，看到白羽和羽依里还有羽未相处得很好时丝毫没有那种面对疯狂发糖时的酸男主情况，不如说这次反而出奇的有代入感，就像羽未真的是我的女儿，大概是我真的好想好想羽未有一个快乐的夏天，最后迎来he，我绝对绝对祝福嗨梨和白羽！！本来亲情题材由于我个人性格原因是不怎么喜欢看的，但是这次的sp我相当喜欢，也相当感动。 要不是te安排在最后，在知道了羽未穿越了那么多个时间线后，恐怕我根本不会想要推其他线了吧。p线结尾时本来真的有点怕羽依里那个木头人就呆在仓库里和白羽错过了，还好世界线终于还是收束到了很棒的结局，可喜可贺，可喜可贺。因为这种代入感，sp在我心中的地位甚至超过clannad（新岛夕写得好啊新岛夕！)。///相比之下，ISLAND的go编剧不知道脑子哪里长泡了，圆满的结婚结局还加一笔大的，搞得乱七八糟，简直了，把我的感动还给我！最后用我女儿的图收尾吧
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/avaritiachaos/shark-img/a1.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/avaritiachaos/shark-img/a2.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/avaritiachaos/shark-img/a3.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>永遠の魔法使い</title>
+        <link>https://tokisaka.asia/p/%E6%B0%B8%E9%81%A0%E3%81%AE%E9%AD%94%E6%B3%95%E4%BD%BF%E3%81%84/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://tokisaka.asia/p/%E6%B0%B8%E9%81%A0%E3%81%AE%E9%AD%94%E6%B3%95%E4%BD%BF%E3%81%84/</guid>
+        <description>&lt;p&gt;八方美人で 調子いいこと言って
+八面玲珑地说着得意忘形的话​
+理想話る 瞳はまっすぐ
+高谈理想的眼神 是如此率真
+その気にさせるのは 上手いのに
+明明擅长让别人产生期待&lt;/p&gt;
+&lt;p&gt;実現できないね 結局
+结果最后 没有一个是实现的呢&lt;/p&gt;
 </description>
         </item>
         <item>
