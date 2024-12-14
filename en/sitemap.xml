@@ -133,7 +133,7 @@
                 href="https://tokisaka.asia/about/"
                 />
   </url><url>
-    <loc>https://tokisaka.asia/p/</loc>
+    <loc>https://tokisaka.asia/categories/eat/</loc>
   </url><url>
     <loc>https://tokisaka.asia/links/</loc>
   </url><url>
@@ -148,5 +148,9 @@
     <loc>https://tokisaka.asia/tags/%E7%99%BD%E6%98%BC%E5%A4%A2/</loc>
   </url><url>
     <loc>https://tokisaka.asia/p/%E7%99%BD%E6%98%BC%E5%A4%A2%E3%81%AE%E9%9D%92%E5%86%99%E7%9C%9F/</loc>
+  </url><url>
+    <loc>https://tokisaka.asia/tags/%E8%8A%B1%E8%8F%9C/</loc>
+  </url><url>
+    <loc>https://tokisaka.asia/p/%E8%8A%B1%E8%8F%9C%E7%82%92%E8%82%89/</loc>
   </url>
 </urlset>
