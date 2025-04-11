@@ -528,7 +528,7 @@
     </div>
     <script>
         
-        if (typeof window.aplayerInstance === 'undefined') {
+        if (!window.aplayerInstance) {
             window.aplayerInstance = new APlayer({
                 container: document.getElementById('aplayer'),
                 fixed: true,
@@ -547,19 +547,41 @@
             });
 
             
-            const savedState = localStorage.getItem('aplayer-setting');
-            if (savedState) {
-                const state = JSON.parse(savedState);
-                if (state.currentTime) {
-                    window.aplayerInstance.seek(state.currentTime);
+            window.aplayerInstance.on('play', function() {
+                const state = {
+                    currentTime: window.aplayerInstance.audio.currentTime,
+                    volume: window.aplayerInstance.audio.volume,
+                    mode: window.aplayerInstance.mode
+                };
+                localStorage.setItem('aplayer-setting', JSON.stringify(state));
+            });
+
+            
+            window.addEventListener('load', function() {
+                const savedState = localStorage.getItem('aplayer-setting');
+                if (savedState) {
+                    const state = JSON.parse(savedState);
+                    if (state.currentTime) {
+                        window.aplayerInstance.seek(state.currentTime);
+                    }
+                    if (state.volume) {
+                        window.aplayerInstance.volume(state.volume, true);
+                    }
+                    if (state.mode) {
+                        window.aplayerInstance.mode(state.mode);
+                    }
                 }
-                if (state.volume) {
-                    window.aplayerInstance.volume(state.volume, true);
-                }
-                if (state.mode) {
-                    window.aplayerInstance.mode(state.mode);
-                }
-            }
+            });
+
+            
+            window.addEventListener('beforeunload', function() {
+                const state = {
+                    currentTime: window.aplayerInstance.audio.currentTime,
+                    volume: window.aplayerInstance.audio.volume,
+                    mode: window.aplayerInstance.mode
+                };
+                localStorage.setItem('aplayer-setting', JSON.stringify(state));
+            });
         }
     </script>
 </body>
