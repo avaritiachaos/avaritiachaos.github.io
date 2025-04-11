@@ -665,7 +665,25 @@
 </head>
 
 <body>
-    <iframe id="music-frame" src="/music-player.html"></iframe>
+    <iframe id="music-frame" src="/music-player.html" onload="initMusicFrame()"></iframe>
+    <script>
+        function initMusicFrame() {
+            const frame = document.getElementById('music-frame');
+            
+            
+            setInterval(() => {
+                frame.contentWindow.postMessage('getState', '*');
+            }, 1000);
+
+            
+            document.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    
+                    frame.contentWindow.postMessage('getState', '*');
+                }
+            });
+        }
+    </script>
 </body>
 </html>
     </body>
