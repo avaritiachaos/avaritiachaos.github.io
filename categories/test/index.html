@@ -528,22 +528,40 @@
     <div id="aplayer">
     </div>
     <script>
-        const ap = new APlayer({
-            container: document.getElementById('aplayer'),
-            fixed: true,
-            autoplay: false, 
-            loop: 'none', 
-            theme: '#e9e9e9',
-            audio: [
-                {
-                    name: '久遠寺有珠',
-                    url: 'https://music.163.com/song/media/outer/url?id=1844449963.mp3',
-                    artist: '深澤秀行',
-                    cover: "https://cdn.jsdelivr.net/gh/avaritiachaos/shark-img/SVWC-7853~55_28.png"
-                },
-            ],
-            localStorageName: 'aplayer-setting' 
-        });
+        
+        if (typeof window.aplayerInstance === 'undefined') {
+            window.aplayerInstance = new APlayer({
+                container: document.getElementById('aplayer'),
+                fixed: true,
+                autoplay: false,
+                loop: 'none',
+                theme: '#e9e9e9',
+                audio: [
+                    {
+                        name: '久遠寺有珠',
+                        url: 'https://music.163.com/song/media/outer/url?id=1844449963.mp3',
+                        artist: '深澤秀行',
+                        cover: "https://cdn.jsdelivr.net/gh/avaritiachaos/shark-img/SVWC-7853~55_28.png"
+                    },
+                ],
+                localStorageName: 'aplayer-setting'
+            });
+
+            
+            const savedState = localStorage.getItem('aplayer-setting');
+            if (savedState) {
+                const state = JSON.parse(savedState);
+                if (state.currentTime) {
+                    window.aplayerInstance.seek(state.currentTime);
+                }
+                if (state.volume) {
+                    window.aplayerInstance.volume(state.volume, true);
+                }
+                if (state.mode) {
+                    window.aplayerInstance.mode(state.mode);
+                }
+            }
+        }
     </script>
 </body>
     </body>
