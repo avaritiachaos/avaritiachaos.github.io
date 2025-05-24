@@ -3,10 +3,10 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://tokisaka.asia/categories/alice-in-wonderland/</loc>
-    <lastmod>2025-03-24T00:00:00+00:00</lastmod>
+    <lastmod>2025-05-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://tokisaka.asia/categories/</loc>
-    <lastmod>2025-03-24T00:00:00+00:00</lastmod>
+    <lastmod>2025-05-24T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -24,7 +24,7 @@
                 />
   </url><url>
     <loc>https://tokisaka.asia/</loc>
-    <lastmod>2025-03-24T00:00:00+00:00</lastmod>
+    <lastmod>2025-05-24T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -42,10 +42,10 @@
                 />
   </url><url>
     <loc>https://tokisaka.asia/post/</loc>
-    <lastmod>2025-03-24T00:00:00+00:00</lastmod>
+    <lastmod>2025-05-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://tokisaka.asia/tags/</loc>
-    <lastmod>2025-03-24T00:00:00+00:00</lastmod>
+    <lastmod>2025-05-24T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -61,6 +61,18 @@
                 hreflang="en"
                 href="https://tokisaka.asia/tags/"
                 />
+  </url><url>
+    <loc>https://tokisaka.asia/tags/%E5%85%A5%E9%97%B4%E4%BA%BA%E9%97%B4/</loc>
+    <lastmod>2025-05-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tokisaka.asia/tags/%E5%A6%B9%E5%A6%B9%E4%BA%BA%E7%94%9F/</loc>
+    <lastmod>2025-05-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tokisaka.asia/p/%E5%A6%B9%E5%A6%B9%E4%BA%BA%E7%94%9F/</loc>
+    <lastmod>2025-05-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tokisaka.asia/tags/%E8%BD%BB%E5%B0%8F%E8%AF%B4/</loc>
+    <lastmod>2025-05-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://tokisaka.asia/tags/%E5%B2%9B%E7%94%B0%E5%BA%84%E5%8F%B8/</loc>
     <lastmod>2025-03-24T00:00:00+00:00</lastmod>
