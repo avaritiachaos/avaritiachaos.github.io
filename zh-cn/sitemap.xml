@@ -2,79 +2,79 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://tokisaka.asia/zh-cn/</loc>
+    <loc>https://tokisaka.top/zh-cn/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://tokisaka.asia/"
+                href="https://tokisaka.top/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
-                href="https://tokisaka.asia/ar/"
+                href="https://tokisaka.top/ar/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://tokisaka.asia/zh-cn/"
+                href="https://tokisaka.top/zh-cn/"
                 />
   </url><url>
-    <loc>https://tokisaka.asia/zh-cn/categories/</loc>
+    <loc>https://tokisaka.top/zh-cn/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://tokisaka.asia/categories/"
+                href="https://tokisaka.top/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
-                href="https://tokisaka.asia/ar/categories/"
+                href="https://tokisaka.top/ar/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://tokisaka.asia/zh-cn/categories/"
+                href="https://tokisaka.top/zh-cn/categories/"
                 />
   </url><url>
-    <loc>https://tokisaka.asia/zh-cn/page/</loc>
+    <loc>https://tokisaka.top/zh-cn/page/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://tokisaka.asia/page/"
+                href="https://tokisaka.top/page/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://tokisaka.asia/zh-cn/page/"
+                href="https://tokisaka.top/zh-cn/page/"
                 />
   </url><url>
-    <loc>https://tokisaka.asia/zh-cn/tags/</loc>
+    <loc>https://tokisaka.top/zh-cn/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://tokisaka.asia/tags/"
+                href="https://tokisaka.top/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
-                href="https://tokisaka.asia/ar/tags/"
+                href="https://tokisaka.top/ar/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://tokisaka.asia/zh-cn/tags/"
+                href="https://tokisaka.top/zh-cn/tags/"
                 />
   </url><url>
-    <loc>https://tokisaka.asia/zh-cn/%E5%85%B3%E4%BA%8E/</loc>
+    <loc>https://tokisaka.top/zh-cn/%E5%85%B3%E4%BA%8E/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://tokisaka.asia/about/"
+                href="https://tokisaka.top/about/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://tokisaka.asia/zh-cn/%E5%85%B3%E4%BA%8E/"
+                href="https://tokisaka.top/zh-cn/%E5%85%B3%E4%BA%8E/"
                 />
   </url>
 </urlset>

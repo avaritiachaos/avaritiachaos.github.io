@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>موقع تجريبي</title>
-        <link>https://tokisaka.asia/ar/</link>
+        <link>https://tokisaka.top/ar/</link>
         <description>Recent content on موقع تجريبي</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>ar</language>
-        <copyright>Example Person</copyright><atom:link href="https://tokisaka.asia/ar/index.xml" rel="self" type="application/rss+xml" />
+        <copyright>Example Person</copyright><atom:link href="https://tokisaka.top/ar/index.xml" rel="self" type="application/rss+xml" />
     </channel>
 </rss>

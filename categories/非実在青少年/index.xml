@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>非実在青少年 on Jabberwocky</title>
-        <link>https://tokisaka.asia/categories/%E9%9D%9E%E5%AE%9F%E5%9C%A8%E9%9D%92%E5%B0%91%E5%B9%B4/</link>
+        <link>https://tokisaka.top/categories/%E9%9D%9E%E5%AE%9F%E5%9C%A8%E9%9D%92%E5%B0%91%E5%B9%B4/</link>
         <description>Recent content in 非実在青少年 on Jabberwocky</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>Example Person</copyright>
-        <lastBuildDate>Sat, 07 May 2022 11:33:21 +0000</lastBuildDate><atom:link href="https://tokisaka.asia/categories/%E9%9D%9E%E5%AE%9F%E5%9C%A8%E9%9D%92%E5%B0%91%E5%B9%B4/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 07 May 2022 11:33:21 +0000</lastBuildDate><atom:link href="https://tokisaka.top/categories/%E9%9D%9E%E5%AE%9F%E5%9C%A8%E9%9D%92%E5%B0%91%E5%B9%B4/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>java换jdk版本环境变量配置后不生效解决方法</title>
-        <link>https://tokisaka.asia/p/java%E6%8D%A2jdk%E7%89%88%E6%9C%AC%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE%E5%90%8E%E4%B8%8D%E7%94%9F%E6%95%88%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</link>
+        <link>https://tokisaka.top/p/java%E6%8D%A2jdk%E7%89%88%E6%9C%AC%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE%E5%90%8E%E4%B8%8D%E7%94%9F%E6%95%88%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</link>
         <pubDate>Sat, 07 May 2022 11:33:21 +0000</pubDate>
         
-        <guid>https://tokisaka.asia/p/java%E6%8D%A2jdk%E7%89%88%E6%9C%AC%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE%E5%90%8E%E4%B8%8D%E7%94%9F%E6%95%88%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</guid>
+        <guid>https://tokisaka.top/p/java%E6%8D%A2jdk%E7%89%88%E6%9C%AC%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE%E5%90%8E%E4%B8%8D%E7%94%9F%E6%95%88%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</guid>
         <description>&lt;p&gt;把系统变量中path的C:\Program Files (x86)\Common Files\Oracle\Java\javapath删除即可&lt;/p&gt;
 </description>
         </item>

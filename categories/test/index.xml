@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Test on Jabberwocky</title>
-        <link>https://tokisaka.asia/categories/test/</link>
+        <link>https://tokisaka.top/categories/test/</link>
         <description>Recent content in Test on Jabberwocky</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
-        <copyright>Example Person</copyright><atom:link href="https://tokisaka.asia/categories/test/index.xml" rel="self" type="application/rss+xml" />
+        <copyright>Example Person</copyright><atom:link href="https://tokisaka.top/categories/test/index.xml" rel="self" type="application/rss+xml" />
     </channel>
 </rss>

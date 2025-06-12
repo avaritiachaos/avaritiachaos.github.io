@@ -2,55 +2,55 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://tokisaka.asia/ar/categories/</loc>
+    <loc>https://tokisaka.top/ar/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://tokisaka.asia/categories/"
+                href="https://tokisaka.top/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://tokisaka.asia/zh-cn/categories/"
+                href="https://tokisaka.top/zh-cn/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
-                href="https://tokisaka.asia/ar/categories/"
+                href="https://tokisaka.top/ar/categories/"
                 />
   </url><url>
-    <loc>https://tokisaka.asia/ar/tags/</loc>
+    <loc>https://tokisaka.top/ar/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://tokisaka.asia/tags/"
+                href="https://tokisaka.top/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://tokisaka.asia/zh-cn/tags/"
+                href="https://tokisaka.top/zh-cn/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
-                href="https://tokisaka.asia/ar/tags/"
+                href="https://tokisaka.top/ar/tags/"
                 />
   </url><url>
-    <loc>https://tokisaka.asia/ar/</loc>
+    <loc>https://tokisaka.top/ar/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://tokisaka.asia/"
+                href="https://tokisaka.top/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://tokisaka.asia/zh-cn/"
+                href="https://tokisaka.top/zh-cn/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
-                href="https://tokisaka.asia/ar/"
+                href="https://tokisaka.top/ar/"
                 />
   </url>
 </urlset>
