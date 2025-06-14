@@ -2,8 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://tokisaka.top/categories/alice-in-wonderland/</loc>
+    <lastmod>2025-05-24T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://tokisaka.top/categories/</loc>
-    <lastmod>2025-06-13T00:07:00+08:00</lastmod>
+    <lastmod>2025-05-24T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -20,11 +23,8 @@
                 href="https://tokisaka.top/categories/"
                 />
   </url><url>
-    <loc>https://tokisaka.top/tags/hugo/</loc>
-    <lastmod>2025-06-13T00:07:00+08:00</lastmod>
-  </url><url>
     <loc>https://tokisaka.top/</loc>
-    <lastmod>2025-06-13T00:07:00+08:00</lastmod>
+    <lastmod>2025-05-24T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -42,10 +42,10 @@
                 />
   </url><url>
     <loc>https://tokisaka.top/post/</loc>
-    <lastmod>2025-06-13T00:07:00+08:00</lastmod>
+    <lastmod>2025-05-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://tokisaka.top/tags/</loc>
-    <lastmod>2025-06-13T00:07:00+08:00</lastmod>
+    <lastmod>2025-05-24T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -61,21 +61,6 @@
                 hreflang="en"
                 href="https://tokisaka.top/tags/"
                 />
-  </url><url>
-    <loc>https://tokisaka.top/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2025-06-13T00:07:00+08:00</lastmod>
-  </url><url>
-    <loc>https://tokisaka.top/p/%E6%B5%8B%E8%AF%95%E9%83%A8%E7%BD%B2%E8%84%9A%E6%9C%AC/</loc>
-    <lastmod>2025-06-13T00:07:00+08:00</lastmod>
-  </url><url>
-    <loc>https://tokisaka.top/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/</loc>
-    <lastmod>2025-06-13T00:07:00+08:00</lastmod>
-  </url><url>
-    <loc>https://tokisaka.top/tags/%E9%83%A8%E7%BD%B2/</loc>
-    <lastmod>2025-06-13T00:07:00+08:00</lastmod>
-  </url><url>
-    <loc>https://tokisaka.top/categories/alice-in-wonderland/</loc>
-    <lastmod>2025-05-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://tokisaka.top/tags/%E5%85%A5%E9%97%B4%E4%BA%BA%E9%97%B4/</loc>
     <lastmod>2025-05-24T00:00:00+00:00</lastmod>
