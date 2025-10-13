@@ -2,55 +2,55 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://tokisaka.top/ar/categories/</loc>
+    <loc>https://avaritiachaos.github.io/ar/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://tokisaka.top/categories/"
+                href="https://avaritiachaos.github.io/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://tokisaka.top/zh-cn/categories/"
+                href="https://avaritiachaos.github.io/zh-cn/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
-                href="https://tokisaka.top/ar/categories/"
+                href="https://avaritiachaos.github.io/ar/categories/"
                 />
   </url><url>
-    <loc>https://tokisaka.top/ar/tags/</loc>
+    <loc>https://avaritiachaos.github.io/ar/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://tokisaka.top/tags/"
+                href="https://avaritiachaos.github.io/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://tokisaka.top/zh-cn/tags/"
+                href="https://avaritiachaos.github.io/zh-cn/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
-                href="https://tokisaka.top/ar/tags/"
+                href="https://avaritiachaos.github.io/ar/tags/"
                 />
   </url><url>
-    <loc>https://tokisaka.top/ar/</loc>
+    <loc>https://avaritiachaos.github.io/ar/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://tokisaka.top/"
+                href="https://avaritiachaos.github.io/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://tokisaka.top/zh-cn/"
+                href="https://avaritiachaos.github.io/zh-cn/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
-                href="https://tokisaka.top/ar/"
+                href="https://avaritiachaos.github.io/ar/"
                 />
   </url>
 </urlset>

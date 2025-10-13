@@ -2,79 +2,79 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://tokisaka.top/zh-cn/</loc>
+    <loc>https://avaritiachaos.github.io/zh-cn/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://tokisaka.top/"
+                href="https://avaritiachaos.github.io/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
-                href="https://tokisaka.top/ar/"
+                href="https://avaritiachaos.github.io/ar/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://tokisaka.top/zh-cn/"
+                href="https://avaritiachaos.github.io/zh-cn/"
                 />
   </url><url>
-    <loc>https://tokisaka.top/zh-cn/categories/</loc>
+    <loc>https://avaritiachaos.github.io/zh-cn/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://tokisaka.top/categories/"
+                href="https://avaritiachaos.github.io/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
-                href="https://tokisaka.top/ar/categories/"
+                href="https://avaritiachaos.github.io/ar/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://tokisaka.top/zh-cn/categories/"
+                href="https://avaritiachaos.github.io/zh-cn/categories/"
                 />
   </url><url>
-    <loc>https://tokisaka.top/zh-cn/page/</loc>
+    <loc>https://avaritiachaos.github.io/zh-cn/page/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://tokisaka.top/page/"
+                href="https://avaritiachaos.github.io/page/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://tokisaka.top/zh-cn/page/"
+                href="https://avaritiachaos.github.io/zh-cn/page/"
                 />
   </url><url>
-    <loc>https://tokisaka.top/zh-cn/tags/</loc>
+    <loc>https://avaritiachaos.github.io/zh-cn/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://tokisaka.top/tags/"
+                href="https://avaritiachaos.github.io/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
-                href="https://tokisaka.top/ar/tags/"
+                href="https://avaritiachaos.github.io/ar/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://tokisaka.top/zh-cn/tags/"
+                href="https://avaritiachaos.github.io/zh-cn/tags/"
                 />
   </url><url>
-    <loc>https://tokisaka.top/zh-cn/%E5%85%B3%E4%BA%8E/</loc>
+    <loc>https://avaritiachaos.github.io/zh-cn/%E5%85%B3%E4%BA%8E/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://tokisaka.top/about/"
+                href="https://avaritiachaos.github.io/about/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://tokisaka.top/zh-cn/%E5%85%B3%E4%BA%8E/"
+                href="https://avaritiachaos.github.io/zh-cn/%E5%85%B3%E4%BA%8E/"
                 />
   </url>
 </urlset>
