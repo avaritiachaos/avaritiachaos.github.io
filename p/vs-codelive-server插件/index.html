@@ -84,7 +84,7 @@ vscode配置live server不生效 弹出提示 Live Reload is not possible withou
         
         <div class="site-meta">
             <h1 class="site-name"><a href="/">Jabberwocky</a></h1>
-            <h2 class="site-description">ねえ！ねえ！タク、楽しかった？</h2>
+            <h2 class="site-description">Why is a raven like a writing desk?</h2>
         </div>
     </header><ol class="social-menu">
             
@@ -589,8 +589,12 @@ Open a folder or workspace… (File -&gt; Open Folder)
     <script>
         
         if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/sw.js').then(function(registration) {
-                console.log('Service Worker registered with scope:', registration.scope);
+            navigator.serviceWorker.register('/sw.js', {
+                updateViaCache: 'none',
+                scope: '/'
+            }).then(function(registration) {
+                
+                registration.update();
             }).catch(function(error) {
                 console.log('Service Worker registration failed:', error);
             });

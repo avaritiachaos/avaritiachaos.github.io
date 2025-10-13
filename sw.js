@@ -1,14 +1,16 @@
 self.addEventListener('install', function(event) {
-    // Perform install steps
-    console.log('Service Worker installing.');
+    // 禁用自动更新
+    event.waitUntil(self.skipWaiting());
 });
 
 self.addEventListener('activate', function(event) {
-    console.log('Service Worker activated.');
+    // 禁用自动更新
+    event.waitUntil(self.clients.claim());
 });
 
 self.addEventListener('fetch', function(event) {
-    // Handle fetch events
+    // 禁用自动更新
+    event.respondWith(fetch(event.request));
 });
 
 // 音频播放状态管理
