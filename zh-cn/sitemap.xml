@@ -2,23 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://avaritiachaos.github.io/zh-cn/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://avaritiachaos.github.io/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ar"
-                href="https://avaritiachaos.github.io/ar/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://avaritiachaos.github.io/zh-cn/"
-                />
-  </url><url>
     <loc>https://avaritiachaos.github.io/zh-cn/categories/</loc>
     <xhtml:link
                 rel="alternate"
@@ -36,16 +19,21 @@
                 href="https://avaritiachaos.github.io/zh-cn/categories/"
                 />
   </url><url>
-    <loc>https://avaritiachaos.github.io/zh-cn/page/</loc>
+    <loc>https://avaritiachaos.github.io/zh-cn/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://avaritiachaos.github.io/page/"
+                href="https://avaritiachaos.github.io/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ar"
+                href="https://avaritiachaos.github.io/ar/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://avaritiachaos.github.io/zh-cn/page/"
+                href="https://avaritiachaos.github.io/zh-cn/"
                 />
   </url><url>
     <loc>https://avaritiachaos.github.io/zh-cn/tags/</loc>
@@ -63,18 +51,6 @@
                 rel="alternate"
                 hreflang="zh-cn"
                 href="https://avaritiachaos.github.io/zh-cn/tags/"
-                />
-  </url><url>
-    <loc>https://avaritiachaos.github.io/zh-cn/%E5%85%B3%E4%BA%8E/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://avaritiachaos.github.io/about/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://avaritiachaos.github.io/zh-cn/%E5%85%B3%E4%BA%8E/"
                 />
   </url>
 </urlset>
