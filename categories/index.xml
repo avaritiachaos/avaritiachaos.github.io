@@ -6,6 +6,39 @@
         <description>Recent content in Categories on Jabberwocky</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
-        <copyright>Example Person</copyright><atom:link href="https://avaritiachaos.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+        <copyright>Example Person</copyright>
+        <lastBuildDate>Sat, 24 May 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://avaritiachaos.github.io/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Alice in Wonderland</title>
+        <link>https://avaritiachaos.github.io/categories/alice-in-wonderland/</link>
+        <pubDate>Sat, 24 May 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://avaritiachaos.github.io/categories/alice-in-wonderland/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>非実在青少年</title>
+        <link>https://avaritiachaos.github.io/categories/%E9%9D%9E%E5%AE%9F%E5%9C%A8%E9%9D%92%E5%B0%91%E5%B9%B4/</link>
+        <pubDate>Sat, 07 May 2022 11:33:21 +0000</pubDate>
+        
+        <guid>https://avaritiachaos.github.io/categories/%E9%9D%9E%E5%AE%9F%E5%9C%A8%E9%9D%92%E5%B0%91%E5%B9%B4/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>eat</title>
+        <link>https://avaritiachaos.github.io/categories/eat/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://avaritiachaos.github.io/categories/eat/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Test</title>
+        <link>https://avaritiachaos.github.io/categories/test/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://avaritiachaos.github.io/categories/test/</guid>
+        <description>&lt;img src="https://avaritiachaos.github.io/categories/test/hutomo-abrianto-l2jk-uxb1BY-unsplash.jpg" alt="Featured image of post Test" /&gt;</description>
+        </item>
+        
     </channel>
 </rss>
