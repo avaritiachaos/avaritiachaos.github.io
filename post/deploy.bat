@@ -93,7 +93,7 @@ cd /d "%hugoRoot%"
 
 echo [92m===== 部署完成！ =====[0m
 echo [36m你的网站应该很快就会更新。[0m
-echo [36m网站地址: https://tokisaka.top[0m
+echo [36m网站地址: https://avaritiachaos.github.io[0m
 
 :: 暂停
 pause 
