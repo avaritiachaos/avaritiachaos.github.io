@@ -1,0 +1,27 @@
+---
+title: VS Code——Live Server插件
+date: 2023-04-08 18:03:55
+tags: [Knowledge]
+---
+
+
+> Live Server：一个具有实时加载功能的小型服务器，可以使用它来html/css/javascript，但是不能用于部署最终站点。也就是说我们可以在项目中实时用live-server作为一个实时服务器实时查看开发的网页或项目效果
+
+# vs 使用live server 时提示Open a folder or workspace... (File -> Open Folder)
+<!-- more -->
+如图标题所示，vs在安装live server之后，创建了html文件之后不能打开
+Open a folder or workspace… (File -> Open Folder)
+解决方案是如下
+（注意在此之前已正确安装live server,及修改默认浏览器）
+首先关闭vs开发工具再打开
+然后 点击file →Open Folder 注意是Folder不是File
+
+![image-20230408181443345](https://cdn.jsdelivr.net/gh/avaritiachaos/shark-img/image-20230408181443345.png)
+
+# vscode配置live server不生效
+
+弹出提示 Live Reload is not possible without a head or body tag.
+
+说明代码里没有body标签。添加完<body></body> 保存
+
+重新运行open with live server就好了。
