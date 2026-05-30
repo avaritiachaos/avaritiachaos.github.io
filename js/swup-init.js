@@ -203,6 +203,28 @@
     }
 
     // =========================================================
+    // 6.5 同步 <body> 的 class
+    // ---------------------------------------------------------
+    // Swup 只替换 <main id="swup"> 内部，不会更新 <body class="...">。
+    // 但本主题的关键布局（.article-page 下的头图 max-height/列偏移）依赖
+    // body 上的 class。若不同步，从首页 PJAX 进入文章页后会丢失
+    // `article-page` class，导致头图撑满整列并盖到右侧栏（穿模）。
+    // content:replace 钩子能拿到新页面完整 HTML，从中解析 body class 并应用。
+    // =========================================================
+    function syncBodyClass(html) {
+      if (!html) return;
+      var match = html.match(/<body[^>]*\sclass=["']([^"']*)["']/i);
+      // 新页面 <body> 没有 class 时也要清空，避免残留上一页的 class
+      document.body.className = match ? match[1].trim() : '';
+    }
+
+    swup.hooks.on('content:replace', function (visit, args) {
+      if (args && args.page && args.page.html) {
+        syncBodyClass(args.page.html);
+      }
+    });
+
+    // =========================================================
     // 7. 注册 Swup 生命周期钩子
     // =========================================================
     swup.hooks.on('page:view', function () {
