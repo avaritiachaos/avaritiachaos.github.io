@@ -42,7 +42,7 @@
            onload=&#34;this.closest(&#39;.cg-wrapper&#39;).classList.add(&#39;loaded&#39;)&#34;&gt;
     &lt;/picture&gt;
   &lt;/div&gt;&lt;/figure&gt;
-
+&lt;br&gt;
 &lt;figure class=&#34;cg-figure&#34;&gt;
   &lt;div class=&#34;cg-wrapper&#34;&gt;
     &lt;img src=&#34;https://cdn.jsdelivr.net/gh/avaritiachaos/shark-img/lqip/day4.webp&#34;
@@ -58,7 +58,7 @@
            onload=&#34;this.closest(&#39;.cg-wrapper&#39;).classList.add(&#39;loaded&#39;)&#34;&gt;
     &lt;/picture&gt;
   &lt;/div&gt;&lt;/figure&gt;
-
+&lt;br&gt;
 &lt;figure class=&#34;cg-figure&#34;&gt;
   &lt;div class=&#34;cg-wrapper&#34;&gt;
     &lt;img src=&#34;https://cdn.jsdelivr.net/gh/avaritiachaos/shark-img/lqip/day2.webp&#34;
@@ -74,7 +74,7 @@
            onload=&#34;this.closest(&#39;.cg-wrapper&#39;).classList.add(&#39;loaded&#39;)&#34;&gt;
     &lt;/picture&gt;
   &lt;/div&gt;&lt;/figure&gt;
-
+&lt;br&gt;
 &lt;figure class=&#34;cg-figure&#34;&gt;
   &lt;div class=&#34;cg-wrapper&#34;&gt;
     &lt;img src=&#34;https://cdn.jsdelivr.net/gh/avaritiachaos/shark-img/lqip/day1.webp&#34;
