@@ -172,7 +172,7 @@
     section.className = 'widget--visitor-board';
     section.innerHTML = ''
       + '<h2 class="widget-title">'
-      +   '<span class="visitor-icon">👣</span>'
+      +   '<span class="visitor-icon">✨</span>'
       +   '最近访客'
       + '</h2>'
       + '<div class="visitor-stats-bar">'
