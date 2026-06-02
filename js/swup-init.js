@@ -65,6 +65,11 @@
       // --- 3c. 更新 per-article BGM 数据（但不中断当前播放） ---
       updateArticleBGM();
 
+      // --- 3d-pre. 访客追踪器：重新发送追踪请求 ---
+      if (window.__visitorTracker && window.__visitorTracker.reinit) {
+        window.__visitorTracker.reinit();
+      }
+
       // --- 3d. 滚动到顶部 ---
       window.scrollTo({ top: 0, behavior: 'instant' });
     }
