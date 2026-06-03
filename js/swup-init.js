@@ -214,18 +214,54 @@
     // 但本主题的关键布局（.article-page 下的头图 max-height/列偏移）依赖
     // body 上的 class。若不同步，从首页 PJAX 进入文章页后会丢失
     // `article-page` class，导致头图撑满整列并盖到右侧栏（穿模）。
-    // content:replace 钩子能拿到新页面完整 HTML，从中解析 body class 并应用。
     // =========================================================
     function syncBodyClass(html) {
-      if (!html) return;
-      var match = html.match(/<body[^>]*\sclass=["']([^"']*)["']/i);
+      if (!html || typeof html !== 'string') return;
+      // 兼容 class="..."、class='...'、class=""、class=''、甚至 class 换行的情况
+      var match = html.match(/<body[^>]*?\sclass=["']([^"']*)["']/i);
       // 新页面 <body> 没有 class 时也要清空，避免残留上一页的 class
       document.body.className = match ? match[1].trim() : '';
     }
 
-    swup.hooks.on('content:replace', function (visit, args) {
-      if (args && args.page && args.page.html) {
-        syncBodyClass(args.page.html);
+    // 从 Swup visit 对象中取出 HTML（兼容 Swup 4 不同版本）
+    function getPageHtmlFromVisit(visit) {
+      if (!visit) return null;
+      // Swup 4 标准方式
+      if (visit.toPage && visit.toPage.html) return visit.toPage.html;
+      // Swup 4 旧版或特殊构建
+      if (visit.page && visit.page.html) return visit.page.html;
+      if (visit.html) return visit.html;
+      return null;
+    }
+
+    function doSyncBodyClass(visit) {
+      var html = getPageHtmlFromVisit(visit);
+      if (html) {
+        syncBodyClass(html);
+        return;
+      }
+      // 兜底：fetch 重新拉当前页面 HTML（只读 body class，开销极小）
+      var url = visit && visit.to && visit.to.url ? visit.to.url : (visit && visit.url ? visit.url : null);
+      if (url) {
+        fetch(url, { headers: { 'X-Requested-With': 'Swup' }, cache: 'force-cache' })
+          .then(function (r) { return r.text(); })
+          .then(function (responseHtml) { syncBodyClass(responseHtml); })
+          .catch(function (err) {
+            console.warn('[PJAX] syncBodyClass: fetch fallback failed', err);
+          });
+        return;
+      }
+      console.warn('[PJAX] syncBodyClass: could not get HTML from visit', visit);
+    }
+
+    swup.hooks.on('content:replace', function (visit) {
+      // 优先从 #swup 内部隐藏元素读取 body class（最可靠，不依赖 visit 结构）
+      var el = document.getElementById('body-class-data');
+      if (el) {
+        document.body.className = el.getAttribute('data-class') || '';
+      } else {
+        // 兜底：尝试从 visit 对象提取
+        doSyncBodyClass(visit);
       }
     });
 
