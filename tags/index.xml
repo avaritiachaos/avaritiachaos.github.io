@@ -7,7 +7,35 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>Example Person</copyright>
-        <lastBuildDate>Sun, 31 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://avaritiachaos.github.io/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 03 Jun 2026 14:38:19 +0800</lastBuildDate><atom:link href="https://avaritiachaos.github.io/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>AI</title>
+        <link>https://avaritiachaos.github.io/tags/ai/</link>
+        <pubDate>Wed, 03 Jun 2026 14:38:19 +0800</pubDate>
+        <guid>https://avaritiachaos.github.io/tags/ai/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Knowledge</title>
+        <link>https://avaritiachaos.github.io/tags/knowledge/</link>
+        <pubDate>Wed, 03 Jun 2026 14:38:19 +0800</pubDate>
+        <guid>https://avaritiachaos.github.io/tags/knowledge/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Prompt</title>
+        <link>https://avaritiachaos.github.io/tags/prompt/</link>
+        <pubDate>Wed, 03 Jun 2026 14:38:19 +0800</pubDate>
+        <guid>https://avaritiachaos.github.io/tags/prompt/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Workflow</title>
+        <link>https://avaritiachaos.github.io/tags/workflow/</link>
+        <pubDate>Wed, 03 Jun 2026 14:38:19 +0800</pubDate>
+        <guid>https://avaritiachaos.github.io/tags/workflow/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>Anemoi</title>
         <link>https://avaritiachaos.github.io/tags/anemoi/</link>
         <pubDate>Sun, 31 May 2026 00:00:00 +0000</pubDate>
@@ -82,13 +110,6 @@
         <link>https://avaritiachaos.github.io/tags/%E6%8E%A8%E7%90%86/</link>
         <pubDate>Mon, 24 Mar 2025 00:00:00 +0000</pubDate>
         <guid>https://avaritiachaos.github.io/tags/%E6%8E%A8%E7%90%86/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Knowledge</title>
-        <link>https://avaritiachaos.github.io/tags/knowledge/</link>
-        <pubDate>Sat, 08 Apr 2023 18:03:55 +0000</pubDate>
-        <guid>https://avaritiachaos.github.io/tags/knowledge/</guid>
         <description></description>
         </item>
         <item>
