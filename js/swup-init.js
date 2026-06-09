@@ -70,6 +70,11 @@
         window.__visitorTracker.reinit();
       }
 
+      // --- 3d-pre2. Wonderland Motion：重新触发卡片入场动画 ---
+      if (window.__wonderlandMotion && window.__wonderlandMotion.init) {
+        window.__wonderlandMotion.init();
+      }
+
       // --- 3d. 滚动到顶部 ---
       window.scrollTo({ top: 0, behavior: 'instant' });
     }
