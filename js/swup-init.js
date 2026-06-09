@@ -179,7 +179,6 @@
         prompt.id = 'bgm-switch-prompt';
         prompt.className = 'bgm-prompt';
         prompt.innerHTML = '🎵 切换到「' + (pageBGM.name || '本文 BGM') + '」';
-        prompt.style.display = 'block';
         document.body.appendChild(prompt);
 
         prompt.addEventListener('click', function () {
@@ -196,14 +195,14 @@
             }]);
             ap.play();
           }
-          prompt.classList.add('hidden');
+          prompt.classList.add('is-hidden');
           setTimeout(function () { prompt.remove(); }, 500);
         });
 
         // 8 秒后自动隐藏
         setTimeout(function () {
           if (prompt.parentNode) {
-            prompt.classList.add('hidden');
+            prompt.classList.add('is-hidden');
             setTimeout(function () { prompt.remove(); }, 500);
           }
         }, 8000);
