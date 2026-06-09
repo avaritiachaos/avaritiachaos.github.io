@@ -43,14 +43,14 @@
   /**
    * ISO 时间字符串转相对时间描述
    * @param {string} isoString - ISO 8601 时间字符串
-   * @returns {string} 中文相对时间
+   * @returns {string} 英文相对时间
    */
   function timeAgo(isoString) {
     var seconds = Math.floor((Date.now() - new Date(isoString).getTime()) / 1000);
-    if (seconds < 60) return '刚刚';
-    if (seconds < 3600) return Math.floor(seconds / 60) + ' 分钟前';
-    if (seconds < 86400) return Math.floor(seconds / 3600) + ' 小时前';
-    return Math.floor(seconds / 86400) + ' 天前';
+    if (seconds < 60) return 'just now';
+    if (seconds < 3600) return Math.floor(seconds / 60) + 'm ago';
+    if (seconds < 86400) return Math.floor(seconds / 3600) + 'h ago';
+    return Math.floor(seconds / 86400) + 'd ago';
   }
 
   /**
@@ -233,44 +233,44 @@
   }
 
   /**
-   * 渲染访客面板 DOM 并插入右侧栏
-   * 仅在面板不存在时创建（sidebar 在 Swup 替换区外，持久化）
+   * 渲染访客面板 DOM
+   * - 在 /visitors/ 页面：渲染到 #visitors-board-container
+   * - 在其他页面：不渲染侧边栏面板（保持侧栏干净）
    */
   function renderVisitorBoard() {
     // 已存在则跳过
     if (document.querySelector('.widget--visitor-board')) return;
 
-    // 查找右侧栏容器
-    var sidebar = document.querySelector('.right-sidebar .sidebar--main')
-      || document.querySelector('.right-sidebar section')
-      || document.querySelector('.sidebar.right-sidebar');
+    // 检查是否在 /visitors/ 页面
+    var visitorsContainer = document.getElementById('visitors-board-container');
+    if (visitorsContainer) {
+      // 清除 loading 占位
+      visitorsContainer.innerHTML = '';
 
-    if (!sidebar) {
-      console.warn('[访客追踪] 未找到右侧栏容器，跳过渲染');
+      var section = document.createElement('section');
+      section.className = 'widget--visitor-board';
+      section.innerHTML = ''
+        + '<h2 class="widget-title">'
+        +   '<span class="visitor-icon">✨</span>'
+        +   'Visitors'
+        + '</h2>'
+        + '<div class="visitor-stats-bar">'
+        +   '<span class="stat-item" id="visitor-today-uv">Today UV: --</span>'
+        +   '<span class="stat-divider">·</span>'
+        +   '<span class="stat-item" id="visitor-total-pv">Total PV: --</span>'
+        + '</div>'
+        + '<div class="visitor-list" id="visitor-list">'
+        +   '<div class="visitor-loading">Loading...</div>'
+        + '</div>'
+        + '<div class="page-view-counter" id="page-view-counter" style="display:none">'
+        +   '📖 Page views: <span id="page-pv-count">--</span>'
+        + '</div>';
+
+      visitorsContainer.appendChild(section);
       return;
     }
 
-    // 构建面板 DOM
-    var section = document.createElement('section');
-    section.className = 'widget--visitor-board';
-    section.innerHTML = ''
-      + '<h2 class="widget-title">'
-      +   '<span class="visitor-icon">✨</span>'
-      +   '最近访客'
-      + '</h2>'
-      + '<div class="visitor-stats-bar">'
-      +   '<span class="stat-item" id="visitor-today-uv">今日 UV: --</span>'
-      +   '<span class="stat-divider">·</span>'
-      +   '<span class="stat-item" id="visitor-total-pv">总 PV: --</span>'
-      + '</div>'
-      + '<div class="visitor-list" id="visitor-list">'
-      +   '<div class="visitor-loading">加载中...</div>'
-      + '</div>'
-      + '<div class="page-view-counter" id="page-view-counter" style="display:none">'
-      +   '📖 本页浏览: <span id="page-pv-count">--</span>'
-      + '</div>';
-
-    sidebar.appendChild(section);
+    // 其他页面：不在侧栏渲染面板
   }
 
   /**
@@ -292,7 +292,7 @@
     listEl.innerHTML = '';
 
     if (!visitors || visitors.length === 0) {
-      listEl.innerHTML = '<div class="visitor-empty">暂无访客记录</div>';
+      listEl.innerHTML = '<div class="visitor-empty">No visitors yet.</div>';
       return;
     }
 
@@ -362,7 +362,7 @@
         if (hasHistory) {
           html += ''
             +     '<div class="visitor-badge-wrap">'
-            +       '<span class="visitor-badge">' + v.history.length + ' 页</span>'
+            +       '<span class="visitor-badge">' + v.history.length + ' pages</span>'
             +       '<span class="visitor-arrow">▾</span>'
             +     '</div>';
         }
@@ -457,11 +457,18 @@
   window.__visitorTracker = {
     /**
      * Swup 页面切换后重新初始化
-     * 不重建面板（sidebar 在替换区外），仅重新追踪和更新页面统计
+     * - 重新追踪和更新页面统计
+     * - 在 /visitors/ 页面重新渲染面板
      */
     reinit: function () {
       trackVisit();
       fetchPageStats();
+      // 如果导航到 visitors 页面，渲染面板
+      renderVisitorBoard();
+      // 重新拉取访客列表（如果面板已存在）
+      if (document.querySelector('.widget--visitor-board')) {
+        fetchVisitors();
+      }
     }
   };
 })();
