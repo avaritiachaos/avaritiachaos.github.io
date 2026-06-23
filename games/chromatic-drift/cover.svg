@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400" role="img" aria-label="Chromatic Drift cover">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#070a16"/>
+      <stop offset="0.55" stop-color="#0c1124"/>
+      <stop offset="1" stop-color="#140a22"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffd06c"/>
+      <stop offset="0.45" stop-color="#ff8ad0"/>
+      <stop offset="1" stop-color="#c8a8ff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="road" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#6cf" stop-opacity="0.05"/>
+      <stop offset="1" stop-color="#6cf" stop-opacity="0.18"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softglow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="9"/>
+    </filter>
+    <clipPath id="skyClip"><rect x="0" y="0" width="640" height="214"/></clipPath>
+  </defs>
+
+  <!-- sky -->
+  <rect width="640" height="400" fill="url(#sky)"/>
+
+  <!-- sun + 横向条带 -->
+  <g clip-path="url(#skyClip)">
+    <circle cx="320" cy="210" r="120" fill="url(#sun)"/>
+    <g fill="#0c1124">
+      <rect x="200" y="170" width="240" height="6"/>
+      <rect x="200" y="184" width="240" height="8"/>
+      <rect x="200" y="200" width="240" height="11"/>
+    </g>
+  </g>
+
+  <!-- 远处线稿建筑 -->
+  <g stroke="#8893a8" stroke-width="1.2" fill="none" opacity="0.5">
+    <rect x="54" y="150" width="42" height="64"/>
+    <rect x="104" y="120" width="30" height="94"/>
+    <rect x="520" y="138" width="40" height="76"/>
+    <rect x="566" y="158" width="28" height="56"/>
+  </g>
+
+  <!-- 地平线辉光 -->
+  <rect x="0" y="212" width="640" height="3" fill="#6cf" filter="url(#glow)" opacity="0.8"/>
+
+  <!-- 透视路面 -->
+  <polygon points="320,214 392,400 248,400" fill="url(#road)"/>
+  <g stroke="#9fb0c8" stroke-width="1" opacity="0.45">
+    <!-- 透视横线 -->
+    <line x1="300" y1="244" x2="340" y2="244"/>
+    <line x1="291" y1="278" x2="349" y2="278"/>
+    <line x1="278" y1="320" x2="362" y2="320"/>
+    <line x1="263" y1="372" x2="377" y2="372"/>
+  </g>
+  <!-- 车道分隔（霓虹） -->
+  <g stroke-width="2" filter="url(#glow)">
+    <line x1="320" y1="214" x2="300" y2="400" stroke="#6cf" opacity="0.8"/>
+    <line x1="320" y1="214" x2="340" y2="400" stroke="#c8f" opacity="0.8"/>
+  </g>
+
+  <!-- 颜料球 -->
+  <g filter="url(#softglow)" opacity="0.85">
+    <circle cx="150" cy="300" r="14" fill="#6cf"/>
+    <circle cx="500" cy="276" r="11" fill="#fc6"/>
+    <circle cx="436" cy="338" r="9" fill="#f68"/>
+  </g>
+  <g fill="none" stroke="#dfe6f2" stroke-width="1.2" opacity="0.9">
+    <circle cx="150" cy="300" r="14"/>
+    <circle cx="500" cy="276" r="11"/>
+    <circle cx="436" cy="338" r="9"/>
+  </g>
+
+  <!-- 线稿赛车（剪影 + 霓虹描边） -->
+  <g transform="translate(320 348)" filter="url(#glow)">
+    <g fill="none" stroke="#eef2fa" stroke-width="2" stroke-linejoin="round">
+      <!-- 车身 -->
+      <path d="M-46 18 L-52 0 L-30 -14 L30 -14 L52 0 L46 18 Z"/>
+      <!-- 座舱 -->
+      <path d="M-16 -14 Q0 -34 16 -14"/>
+      <!-- 尾翼 -->
+      <line x1="-30" y1="-14" x2="-42" y2="-22"/>
+      <line x1="30" y1="-14" x2="42" y2="-22"/>
+      <line x1="-42" y1="-22" x2="42" y2="-22"/>
+    </g>
+    <!-- 底盘霓虹光带 -->
+    <rect x="-40" y="14" width="80" height="4" rx="2" fill="#6cf" filter="url(#softglow)"/>
+    <!-- 轮 -->
+    <g fill="#0c1124" stroke="#cfd6e6" stroke-width="2">
+      <circle cx="-40" cy="16" r="9"/>
+      <circle cx="40" cy="16" r="9"/>
+    </g>
+  </g>
+</svg>
